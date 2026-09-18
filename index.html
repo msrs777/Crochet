@@ -4,121 +4,133 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"
-        content="Beautiful handmade crochet creations crafted with 20 years of experience. Crochet bags, flowers, home decor and personalized gifts.">
-
-  <meta name="keywords"
-        content="crochet, handmade crochet, crochet bags, crochet flowers, crochet gifts, handmade gifts, crochet Odisha">
-
-  <title>Thread & Bloom | Handmade Crochet</title>
+  <title>Thread & Bloom Crochet | Handmade Crochet Products</title>
+  <meta name="description" content="Beautiful handmade crochet bags, flowers, home décor, gifts, toys and custom crochet products. Explore 100+ handmade products.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header class="header">
 
   <a href="#home" class="logo">
-    <span>✿</span>
-    Thread & Bloom
+    <span class="logo-flower">✿</span>
+    <span>
+      <strong>Thread & Bloom</strong>
+      <small>HANDMADE CROCHET</small>
+    </span>
   </a>
 
-  <button class="menu" aria-label="Open menu">
-    ☰
-  </button>
+  <button class="menu" aria-label="Open Menu">☰</button>
 
   <nav>
     <a href="#home">Home</a>
-    <a href="#about">My Story</a>
-    <a href="#collection">Collection</a>
+    <a href="#about">About</a>
+
+    <div class="dropdown">
+      <button class="drop-btn">
+        Products <span>⌄</span>
+      </button>
+
+      <div class="dropdown-content">
+        <a href="#bags">Crochet Bags</a>
+        <a href="#flowers">Crochet Flowers</a>
+        <a href="#home-decor">Home Décor</a>
+        <a href="#baby">Baby Collection</a>
+        <a href="#toys">Toys & Dolls</a>
+        <a href="#gifts">Gift Items</a>
+        <a href="#custom">Custom Orders</a>
+      </div>
+    </div>
+
     <a href="#custom">Custom Orders</a>
     <a href="#contact">Contact</a>
-  </nav>
 
-  <a href="#contact" class="nav-btn">
-    Order Handmade
-  </a>
+    <a href="#" id="waBtn" class="header-whatsapp">
+      WhatsApp
+    </a>
+  </nav>
 
 </header>
 
 
-<main>
+<!-- ================= HERO ================= -->
 
-<!-- HERO -->
+<main>
 
 <section id="home" class="hero">
 
-  <div class="hero-copy">
+  <div class="hero-content">
 
-    <p class="eyebrow">
-      HANDMADE • TIMELESS • PERSONAL
-    </p>
+    <div class="trust">
+      ✦ 100+ Handmade Products
+      <span>•</span>
+      Made with Love
+    </div>
 
     <h1>
-      Little pieces of love,
-      <br>
-      <em>stitched by hand.</em>
+      Beautifully Handmade,
+      <em>One Stitch at a Time.</em>
     </h1>
 
-    <p class="lead">
-      Beautiful crochet creations crafted with patience,
-      care and 20 years of experience. Made for homes,
-      gifts and the special moments in between.
+    <p>
+      Discover beautiful crochet creations made with patience,
+      creativity and care — perfect for your home, gifts and special moments.
     </p>
 
-    <div class="actions">
-
-      <a href="#collection" class="btn primary">
+    <div class="hero-buttons">
+      <a href="#products" class="btn primary">
         Explore Collection
       </a>
 
-      <a href="#custom" class="btn secondary">
-        Create Something Custom →
+      <a href="#" id="heroWhatsApp" class="btn secondary">
+        Order on WhatsApp
       </a>
-
     </div>
 
-    <div class="trust">
-      <span>✦</span>
-      20 Years of Crochet Experience
-      <span>•</span>
-      Handmade in Odisha
+    <div class="hero-stats">
+
+      <div>
+        <strong>100+</strong>
+        <span>Products</span>
+      </div>
+
+      <div>
+        <strong>100%</strong>
+        <span>Handmade</span>
+      </div>
+
+      <div>
+        <strong>Custom</strong>
+        <span>Designs</span>
+      </div>
+
     </div>
 
   </div>
 
 
-  <div class="hero-art">
+  <div class="hero-visual">
 
-    <div class="yarn-ball">
-      🧶
+    <div class="hero-image-main">
+      <img
+        src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=1000&q=85"
+        alt="Beautiful handmade crochet products">
     </div>
 
-    <div class="flower f1">
-      🌸
-    </div>
-
-    <div class="flower f2">
-      🌼
-    </div>
-
-    <div class="flower f3">
-      🌷
-    </div>
-
-    <div class="badge">
-      MADE
-      <br>
-      WITH
-      <br>
-      LOVE
+    <div class="floating-card">
+      <span>✿</span>
+      <div>
+        <strong>Handmade with Love</strong>
+        <small>Unique • Beautiful • Personal</small>
+      </div>
     </div>
 
   </div>
@@ -126,192 +138,276 @@
 </section>
 
 
-<!-- MARQUEE -->
+<!-- ================= MARQUEE ================= -->
 
 <section class="marquee">
 
-  <span>HANDMADE WITH LOVE</span>
-  <span>✿</span>
-  <span>ONE STITCH AT A TIME</span>
-  <span>✿</span>
-  <span>MADE TO TREASURE</span>
-  <span>✿</span>
+  <div class="marquee-track">
+    <span>HANDMADE WITH LOVE</span>
+    <i>✿</i>
+    <span>100+ CROCHET PRODUCTS</span>
+    <i>✿</i>
+    <span>CUSTOM ORDERS</span>
+    <i>✿</i>
+    <span>BEAUTIFUL GIFTS</span>
+    <i>✿</i>
+    <span>HANDMADE WITH LOVE</span>
+  </div>
 
 </section>
 
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
 
 <section id="about" class="about section">
 
-  <div class="section-label">
-    MY STORY
+  <div class="about-image">
+    <img
+      src="https://images.unsplash.com/photo-1604881991720-f91add269bed?auto=format&fit=crop&w=900&q=85"
+      alt="Handmade crochet craft">
   </div>
 
-  <div>
+  <div class="about-content">
+
+    <div class="section-label">OUR STORY</div>
 
     <h2>
-      Twenty years of turning
-      <br>
-      <em>yarn into memories.</em>
+      Turning yarn into
+      <em>beautiful memories.</em>
     </h2>
 
     <p>
-      What started as a love for yarn and a simple crochet hook
-      became a lifelong craft.
+      Every piece we create begins with yarn, imagination and a love
+      for handmade craftsmanship.
     </p>
 
     <p>
-      Every piece is made by hand, slowly and thoughtfully,
-      with an eye for detail.
+      From everyday accessories to thoughtful gifts and charming
+      home décor, our crochet collection is made to bring warmth
+      and personality into everyday life.
     </p>
 
-    <p>
-      From delicate flowers and cozy home décor to beautiful
-      bags and thoughtful gifts, I create pieces that feel
-      personal — not mass produced.
-    </p>
-
-    <a href="#contact" class="text-link">
-      Tell me what you have in mind →
+    <a href="#products" class="text-link">
+      Discover our collection →
     </a>
 
   </div>
 
-
-  <div class="stats">
-
-    <div>
-      <strong>20+</strong>
-      <span>Years crafting</span>
-    </div>
-
-    <div>
-      <strong>500+</strong>
-      <span>Pieces created</span>
-    </div>
-
-    <div>
-      <strong>100%</strong>
-      <span>Handmade</span>
-    </div>
-
-  </div>
-
 </section>
 
 
-<!-- COLLECTION -->
+<!-- ================= PRODUCTS ================= -->
 
-<section id="collection" class="collection section">
+<section id="products" class="products section">
 
-  <div class="center-head">
+  <div class="section-heading">
 
-    <p class="eyebrow">
-      THE COLLECTION
-    </p>
+    <div>
+      <div class="section-label">OUR COLLECTION</div>
 
-    <h2>
-      Made slowly.
-      <em>Loved forever.</em>
-    </h2>
+      <h2>
+        Handmade pieces for
+        <em>every occasion.</em>
+      </h2>
+    </div>
 
     <p>
-      Browse a few of my favorite crochet creations.
-      Each design can be customized by color, size and style.
+      Explore our collection of 100+ beautiful crochet products.
     </p>
 
   </div>
 
 
-  <div class="cards">
+  <div class="product-grid">
 
-    <article class="card">
+    <!-- BAG -->
 
-      <div class="product-img pink">
-        👜
-      </div>
+    <article class="product-card" id="bags">
 
-      <div class="card-body">
+      <div class="product-image">
 
-        <p>01 • BAGS</p>
+        <img
+          src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=800&q=85"
+          alt="Crochet bags">
 
-        <h3>
-          Everyday Crochet Bags
-        </h3>
-
-        <span>
-          From ₹799
-        </span>
+        <span class="product-tag">Popular</span>
 
       </div>
 
-    </article>
+      <div class="product-info">
 
+        <span>01</span>
 
-    <article class="card">
+        <h3>Crochet Bags</h3>
 
-      <div class="product-img cream">
-        🌸
-      </div>
+        <p>
+          Stylish handmade bags for everyday use and special occasions.
+        </p>
 
-      <div class="card-body">
-
-        <p>02 • FLOWERS</p>
-
-        <h3>
-          Forever Flower Bouquets
-        </h3>
-
-        <span>
-          From ₹399
-        </span>
+        <a href="#" class="product-link"
+           data-product="Crochet Bags">
+           Enquire on WhatsApp →
+        </a>
 
       </div>
 
     </article>
 
 
-    <article class="card">
+    <!-- FLOWERS -->
 
-      <div class="product-img sage">
-        🏠
+    <article class="product-card" id="flowers">
+
+      <div class="product-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&q=85"
+          alt="Crochet flowers">
+
       </div>
 
-      <div class="card-body">
+      <div class="product-info">
 
-        <p>03 • HOME</p>
+        <span>02</span>
 
-        <h3>
-          Cozy Home Décor
-        </h3>
+        <h3>Crochet Flowers</h3>
 
-        <span>
-          From ₹299
-        </span>
+        <p>
+          Colourful handmade flowers that stay beautiful forever.
+        </p>
+
+        <a href="#" class="product-link"
+           data-product="Crochet Flowers">
+           Enquire on WhatsApp →
+        </a>
 
       </div>
 
     </article>
 
 
-    <article class="card">
+    <!-- HOME DECOR -->
 
-      <div class="product-img rose">
-        🎁
+    <article class="product-card" id="home-decor">
+
+      <div class="product-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=800&q=85"
+          alt="Crochet home decor">
+
       </div>
 
-      <div class="card-body">
+      <div class="product-info">
 
-        <p>04 • GIFTS</p>
+        <span>03</span>
 
-        <h3>
-          Personalized Gifts
-        </h3>
+        <h3>Home Décor</h3>
 
-        <span>
-          From ₹499
-        </span>
+        <p>
+          Warm and charming crochet pieces for your home.
+        </p>
+
+        <a href="#" class="product-link"
+           data-product="Crochet Home Décor">
+           Enquire on WhatsApp →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- BABY -->
+
+    <article class="product-card" id="baby">
+
+      <div class="product-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=800&q=85"
+          alt="Crochet baby products">
+
+      </div>
+
+      <div class="product-info">
+
+        <span>04</span>
+
+        <h3>Baby Collection</h3>
+
+        <p>
+          Cute and thoughtful handmade pieces for little ones.
+        </p>
+
+        <a href="#" class="product-link"
+           data-product="Crochet Baby Collection">
+           Enquire on WhatsApp →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- TOYS -->
+
+    <article class="product-card" id="toys">
+
+      <div class="product-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1559454403-b8fb88521f11?auto=format&fit=crop&w=800&q=85"
+          alt="Crochet toys">
+
+      </div>
+
+      <div class="product-info">
+
+        <span>05</span>
+
+        <h3>Toys & Dolls</h3>
+
+        <p>
+          Adorable handmade crochet toys made for gifting and collecting.
+        </p>
+
+        <a href="#" class="product-link"
+           data-product="Crochet Toys & Dolls">
+           Enquire on WhatsApp →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- GIFTS -->
+
+    <article class="product-card" id="gifts">
+
+      <div class="product-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&w=800&q=85"
+          alt="Crochet handmade gifts">
+
+      </div>
+
+      <div class="product-info">
+
+        <span>06</span>
+
+        <h3>Gift Collection</h3>
+
+        <p>
+          Handmade gifts for birthdays, anniversaries and special moments.
+        </p>
+
+        <a href="#" class="product-link"
+           data-product="Crochet Gift Collection">
+           Enquire on WhatsApp →
+        </a>
 
       </div>
 
@@ -322,106 +418,148 @@
 </section>
 
 
-<!-- CUSTOM ORDER -->
+<!-- ================= WHY US ================= -->
+
+<section class="why section">
+
+  <div class="section-heading centered">
+
+    <div class="section-label">WHY HANDMADE</div>
+
+    <h2>
+      Made differently,
+      <em>made personally.</em>
+    </h2>
+
+  </div>
+
+
+  <div class="why-grid">
+
+    <div class="why-card">
+      <div class="why-icon">✿</div>
+      <h3>Handmade</h3>
+      <p>
+        Every piece is carefully crafted by hand.
+      </p>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">♡</div>
+      <h3>Made with Love</h3>
+      <p>
+        Thoughtful details make every creation special.
+      </p>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">✧</div>
+      <h3>Custom Designs</h3>
+      <p>
+        Request colours, sizes and designs that suit you.
+      </p>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">🎁</div>
+      <h3>Perfect Gifts</h3>
+      <p>
+        Unique handmade gifts for people you love.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CUSTOM ORDER ================= -->
 
 <section id="custom" class="custom section">
 
-  <div>
+  <div class="custom-content">
 
-    <p class="eyebrow">
-      YOUR IDEA, MY HANDS
-    </p>
+    <div class="section-label">CUSTOM ORDERS</div>
 
     <h2>
       Dream it.
-      <br>
-      <em>I'll crochet it.</em>
+      <em>We'll crochet it.</em>
     </h2>
 
     <p>
-      Have a favorite color, a special occasion,
-      or an idea you've seen somewhere?
-      Tell me about it.
+      Have something special in mind? Tell us what you'd like,
+      and we'll discuss the design, colour and details with you.
     </p>
 
-    <p>
-      Custom crochet pieces are made especially for you.
-    </p>
+    <div class="custom-points">
+      <span>✓ Choose your colour</span>
+      <span>✓ Choose your size</span>
+      <span>✓ Personalised designs</span>
+      <span>✓ Special gift orders</span>
+    </div>
 
   </div>
 
 
-  <form id="orderForm">
+  <form id="orderForm" class="order-form">
 
-    <label>
-      Your Name
+    <h3>Request a Custom Order</h3>
 
-      <input
-        type="text"
-        name="name"
-        placeholder="Your name"
-        required>
-    </label>
+    <label>Your Name</label>
+    <input
+      type="text"
+      name="name"
+      placeholder="Enter your name"
+      required
+    >
 
+    <label>What would you like?</label>
 
-    <label>
-      What would you like?
+    <select name="item" required>
 
-      <select name="item">
+      <option value="">Select a product</option>
 
-        <option>Bag</option>
-        <option>Flower bouquet</option>
-        <option>Home décor</option>
-        <option>Gift</option>
-        <option>Custom idea</option>
+      <option>Crochet Bag</option>
+      <option>Crochet Flower</option>
+      <option>Home Décor</option>
+      <option>Baby Item</option>
+      <option>Crochet Toy</option>
+      <option>Gift Item</option>
+      <option>Other Custom Design</option>
 
-      </select>
-
-    </label>
-
-
-    <label>
-      Tell me about it
-
-      <textarea
-        name="message"
-        placeholder="Color, size, occasion, quantity..."
-        required></textarea>
-
-    </label>
+    </select>
 
 
-    <button
-      class="btn primary"
-      type="submit">
+    <label>Tell us about it</label>
 
-      Send Order Enquiry →
+    <textarea
+      name="message"
+      rows="4"
+      placeholder="Colour, size, quantity or any special request..."
+      required
+    ></textarea>
 
+
+    <button type="submit" class="btn primary full">
+      Send Enquiry on WhatsApp
     </button>
-
-    <small>
-      Your enquiry will open in WhatsApp.
-    </small>
 
   </form>
 
 </section>
 
 
-<!-- REVIEWS -->
+<!-- ================= REVIEWS ================= -->
 
 <section class="reviews section">
 
-  <div class="center-head">
+  <div class="section-heading centered">
 
-    <p class="eyebrow">
-      KIND WORDS
-    </p>
+    <div class="section-label">KIND WORDS</div>
 
     <h2>
-      Made with care,
-      <br>
-      <em>remembered with love.</em>
+      Loved by people who
+      <em>love handmade.</em>
     </h2>
 
   </div>
@@ -429,92 +567,73 @@
 
   <div class="review-grid">
 
-    <blockquote>
+    <div class="review">
+      <div class="stars">★★★★★</div>
 
-      “The flower bouquet was even more beautiful
-      than I imagined. It will stay with me forever.”
+      <p>
+        “The crochet bag was even more beautiful than I expected.
+        The finishing was lovely!”
+      </p>
 
-      <cite>
-        — Happy Customer
-      </cite>
-
-    </blockquote>
-
-
-    <blockquote>
-
-      “Such beautiful finishing and attention to detail.
-      You can truly feel the handmade love.”
-
-      <cite>
-        — Happy Customer
-      </cite>
-
-    </blockquote>
+      <strong>— Happy Customer</strong>
+    </div>
 
 
-    <blockquote>
+    <div class="review">
+      <div class="stars">★★★★★</div>
 
-      “I ordered a custom bag as a gift and it turned
-      out perfect. Absolutely special.”
+      <p>
+        “I ordered handmade flowers as a gift and they turned out
+        absolutely beautiful.”
+      </p>
 
-      <cite>
-        — Happy Customer
-      </cite>
+      <strong>— Happy Customer</strong>
+    </div>
 
-    </blockquote>
+
+    <div class="review">
+      <div class="stars">★★★★★</div>
+
+      <p>
+        “Beautiful work and very thoughtful packaging. I will
+        definitely order again.”
+      </p>
+
+      <strong>— Happy Customer</strong>
+    </div>
 
   </div>
 
 </section>
 
 
-<!-- CONTACT -->
+<!-- ================= CONTACT ================= -->
 
 <section id="contact" class="contact section">
 
   <div>
 
-    <p class="eyebrow">
-      LET'S CREATE
-    </p>
+    <div class="section-label">GET IN TOUCH</div>
 
     <h2>
-      Have a question?
-      <br>
-      <em>Let's talk yarn.</em>
+      Let's create something
+      <em>beautiful together.</em>
     </h2>
-
-    <p>
-      For orders, custom designs and availability,
-      send a WhatsApp message.
-    </p>
 
   </div>
 
 
-  <div class="contact-box">
+  <div class="contact-details">
 
-    <p>
-      WhatsApp
-    </p>
-
-    <h3>
+    <a href="#" id="contactWhatsApp">
+      <span>WhatsApp</span>
       +91 99378 67737
-    </h3>
-
-    <a
-      class="btn primary"
-      id="waBtn"
-      href="#">
-
-      Chat on WhatsApp →
-
     </a>
 
-    <small>
-      Usually replies within a few hours.
-    </small>
+    <a href="tel:+919937867737">
+      <span>Call Us</span>
+      +91 99378 67737
+    </a>
 
   </div>
 
@@ -523,24 +642,52 @@
 </main>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-  <div class="logo">
-    <span>✿</span>
-    Thread & Bloom
+  <div class="footer-brand">
+
+    <div class="logo">
+      <span class="logo-flower">✿</span>
+
+      <span>
+        <strong>Thread & Bloom</strong>
+        <small>HANDMADE CROCHET</small>
+      </span>
+    </div>
+
+    <p>
+      Beautiful handmade crochet creations,
+      made with love.
+    </p>
+
   </div>
 
-  <p>
-    Handcrafted crochet • Made with love in Odisha
-  </p>
 
-  <p>
-    © 2026 Thread & Bloom Crochet
-  </p>
+  <div class="footer-links">
+
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#custom">Custom Orders</a>
+    <a href="#contact">Contact</a>
+
+  </div>
+
+
+  <div class="footer-bottom">
+    © 2026 Thread & Bloom Crochet. All rights reserved.
+  </div>
 
 </footer>
+
+
+<!-- Floating WhatsApp -->
+
+<a href="#" id="floatingWhatsApp" class="floating-whatsapp">
+  <span>WhatsApp</span>
+</a>
 
 
 <script src="script.js"></script>

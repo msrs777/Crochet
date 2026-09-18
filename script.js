@@ -1,85 +1,162 @@
 // ========================================
-// CROCHET WEBSITE
+// THREAD & BLOOM CROCHET
 // ========================================
-
-// Change this number to your WhatsApp number.
-// Country code first, without + or spaces.
 
 const WHATSAPP_NUMBER = "919937867737";
 
 
 // ========================================
-// WHATSAPP LINK
+// WHATSAPP URL
 // ========================================
 
 function whatsappUrl(message) {
-
-  return (
-    "https://wa.me/" +
-    WHATSAPP_NUMBER +
-    "?text=" +
-    encodeURIComponent(message)
-  );
-
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
 
 // ========================================
-// MAIN WHATSAPP BUTTON
+// HEADER WHATSAPP
 // ========================================
 
-const waButton = document.getElementById("waBtn");
+const waBtn = document.getElementById("waBtn");
 
-if (waButton) {
-
-  waButton.href = whatsappUrl(
-    "Hi Thread & Bloom Crochet! 🌸 I would like to know about your crochet products."
+if (waBtn) {
+  waBtn.href = whatsappUrl(
+    "Hi Thread & Bloom Crochet! 🌸 I would like to know about your handmade crochet products."
   );
-
 }
+
+
+// ========================================
+// HERO WHATSAPP
+// ========================================
+
+const heroWhatsApp = document.getElementById("heroWhatsApp");
+
+if (heroWhatsApp) {
+  heroWhatsApp.href = whatsappUrl(
+    "Hi Thread & Bloom Crochet! 🌸 I am interested in your crochet products. Please share your collection and prices."
+  );
+}
+
+
+// ========================================
+// CONTACT WHATSAPP
+// ========================================
+
+const contactWhatsApp = document.getElementById("contactWhatsApp");
+
+if (contactWhatsApp) {
+  contactWhatsApp.href = whatsappUrl(
+    "Hi Thread & Bloom Crochet! 🌸 I would like to enquire about your handmade crochet products."
+  );
+}
+
+
+// ========================================
+// FLOATING WHATSAPP
+// ========================================
+
+const floatingWhatsApp =
+  document.getElementById("floatingWhatsApp");
+
+if (floatingWhatsApp) {
+  floatingWhatsApp.href = whatsappUrl(
+    "Hi Thread & Bloom Crochet! 🌸 I would like to place an enquiry."
+  );
+}
+
+
+// ========================================
+// PRODUCT WHATSAPP BUTTONS
+// ========================================
+
+document.querySelectorAll(".product-link").forEach(function (button) {
+
+  button.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+    const product =
+      button.getAttribute("data-product");
+
+    const message =
+`Hi Thread & Bloom Crochet! 🌸
+
+I am interested in:
+${product}
+
+Please share:
+• Available designs
+• Price
+• Colours
+• Delivery details
+
+Thank you!`;
+
+    window.open(
+      whatsappUrl(message),
+      "_blank"
+    );
+
+  });
+
+});
 
 
 // ========================================
 // CUSTOM ORDER FORM
 // ========================================
 
-const orderForm = document.getElementById("orderForm");
+const orderForm =
+  document.getElementById("orderForm");
 
 if (orderForm) {
 
-  orderForm.addEventListener("submit", function (event) {
+  orderForm.addEventListener(
+    "submit",
+    function (event) {
 
-    event.preventDefault();
+      event.preventDefault();
 
-    const data = new FormData(orderForm);
+      const data =
+        new FormData(orderForm);
 
-    const name = data.get("name");
-    const item = data.get("item");
-    const message = data.get("message");
+      const name =
+        data.get("name");
+
+      const item =
+        data.get("item");
+
+      const message =
+        data.get("message");
 
 
-    const whatsappMessage =
+      const whatsappMessage =
 `Hi Thread & Bloom Crochet! 🌸
 
-Name: ${name}
+I would like to place a custom order.
 
-Interested in:
+Name:
+${name}
+
+Product:
 ${item}
 
-Details:
+My requirements:
 ${message}
 
-Please share the price and availability.
+Please let me know the price, available colours and delivery details.
 
 Thank you!`;
 
+      window.open(
+        whatsappUrl(whatsappMessage),
+        "_blank"
+      );
 
-    window.open(
-      whatsappUrl(whatsappMessage),
-      "_blank"
-    );
-
-  });
+    }
+  );
 
 }
 
@@ -88,38 +165,60 @@ Thank you!`;
 // MOBILE MENU
 // ========================================
 
-const menuButton = document.querySelector(".menu");
-const navigation = document.querySelector(".header nav");
+const menuButton =
+  document.querySelector(".menu");
+
+const navigation =
+  document.querySelector(".header nav");
 
 if (menuButton && navigation) {
 
-  menuButton.addEventListener("click", function () {
+  menuButton.addEventListener(
+    "click",
+    function () {
 
-    if (navigation.style.display === "flex") {
+      if (navigation.style.display === "flex") {
 
-      navigation.style.display = "none";
+        navigation.style.display = "none";
 
-    } else {
+      } else {
 
-      navigation.style.display = "flex";
+        navigation.style.display = "flex";
 
-      navigation.style.position = "absolute";
-
-      navigation.style.top = "78px";
-
-      navigation.style.left = "0";
-
-      navigation.style.right = "0";
-
-      navigation.style.padding = "20px 6%";
-
-      navigation.style.background = "#fbf6ee";
-
-      navigation.style.flexDirection = "column";
+      }
 
     }
+  );
 
-  });
+}
+
+
+// ========================================
+// MOBILE PRODUCTS DROPDOWN
+// ========================================
+
+const dropdown =
+  document.querySelector(".dropdown");
+
+const dropdownButton =
+  document.querySelector(".drop-btn");
+
+if (dropdown && dropdownButton) {
+
+  dropdownButton.addEventListener(
+    "click",
+    function (event) {
+
+      if (window.innerWidth <= 850) {
+
+        event.preventDefault();
+
+        dropdown.classList.toggle("open");
+
+      }
+
+    }
+  );
 
 }
 
@@ -128,18 +227,43 @@ if (menuButton && navigation) {
 // CLOSE MOBILE MENU AFTER CLICK
 // ========================================
 
-const navLinks = document.querySelectorAll(".header nav a");
+document
+  .querySelectorAll(".header nav a")
+  .forEach(function (link) {
 
-navLinks.forEach(function (link) {
+    link.addEventListener(
+      "click",
+      function () {
 
-  link.addEventListener("click", function () {
+        if (window.innerWidth <= 850) {
 
-    if (window.innerWidth <= 850) {
+          navigation.style.display = "none";
+
+        }
+
+      }
+    );
+
+  });
+
+
+// ========================================
+// RESET MENU WHEN SCREEN RESIZES
+// ========================================
+
+window.addEventListener(
+  "resize",
+  function () {
+
+    if (window.innerWidth > 850) {
+
+      navigation.style.display = "flex";
+
+    } else {
 
       navigation.style.display = "none";
 
     }
 
-  });
-
-});
+  }
+);
