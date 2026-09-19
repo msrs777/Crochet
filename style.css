@@ -728,35 +728,59 @@ footer {
   font-size: 11px;
 }
 
-
-/* FLOATING WHATSAPP */
+/* ================= FLOATING WHATSAPP ================= */
 
 .floating-whatsapp {
   position: fixed;
   right: 22px;
   bottom: 22px;
-  z-index: 2000;
-  background: #25D366;
-  color: white;
+
   width: 58px;
   height: 58px;
+
+  background: #25D366;
+  color: #ffffff;
+
   border-radius: 50%;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-  font-size: 0;
+
+  text-decoration: none;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+
+  z-index: 9999;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.floating-whatsapp::before {
-  content: "✆";
-  font-size: 25px;
+.floating-whatsapp svg {
+  width: 34px;
+  height: 34px;
+  display: block;
 }
 
 .floating-whatsapp:hover {
   transform: scale(1.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.28);
 }
 
+@media (max-width: 700px) {
+  .floating-whatsapp {
+    right: 16px;
+    bottom: 16px;
+
+    width: 54px;
+    height: 54px;
+  }
+
+  .floating-whatsapp svg {
+    width: 31px;
+    height: 31px;
+  }
+}
 
 /* MOBILE */
 
