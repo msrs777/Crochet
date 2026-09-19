@@ -907,3 +907,78 @@ footer {
   }
 
 }
+
+/* ================= TOP INFO BAR ================= */
+
+.top-info-bar {
+  width: 100%;
+  background: #f7eee8;
+  border-bottom: 1px solid rgba(80, 50, 40, 0.12);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 9px 5%;
+  box-sizing: border-box;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  color: #5c4942;
+}
+
+.top-location {
+  font-weight: 500;
+}
+
+.top-contact {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.top-contact span {
+  white-space: nowrap;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .top-info-bar {
+    padding: 8px 4%;
+    font-size: 11px;
+  }
+
+  .top-contact {
+    gap: 10px;
+  }
+
+  .top-contact span:nth-child(2) {
+    display: none;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .top-info-bar {
+    justify-content: center;
+  }
+
+  .top-location {
+    display: none;
+  }
+
+  .top-contact {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .top-contact span {
+    font-size: 10px;
+  }
+
+}
