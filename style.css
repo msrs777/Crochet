@@ -982,3 +982,169 @@ footer {
   }
 
 }
+
+/* ========================================
+   CUSTOMER INFO BAR
+======================================== */
+
+.top-info-bar {
+  width: 100%;
+  min-height: 58px;
+
+  background: #7b3f58;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 7px 5%;
+  box-sizing: border-box;
+
+  font-family: "DM Sans", sans-serif;
+
+  box-shadow: 0 3px 12px rgba(60, 30, 40, 0.12);
+
+  position: relative;
+  z-index: 1000;
+}
+
+
+/* LEFT LOCATION */
+
+.top-info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #fff;
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+}
+
+.top-info-item:hover {
+  transform: translateY(-1px);
+  opacity: 0.85;
+}
+
+
+/* RIGHT SIDE */
+
+.top-info-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+
+/* ICON */
+
+.top-icon {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+
+  font-size: 14px;
+}
+
+
+/* TEXT */
+
+.top-info-item span:last-child {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.top-info-item small {
+  display: block;
+
+  font-size: 9px;
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  opacity: 0.7;
+
+  margin-bottom: 2px;
+}
+
+
+/* HOVER */
+
+.top-info-item:hover .top-icon {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .top-info-bar {
+    padding: 7px 4%;
+  }
+
+  .top-info-right {
+    gap: 12px;
+  }
+
+  .top-info-item span:last-child {
+    font-size: 11px;
+  }
+
+  .top-info-item small {
+    font-size: 8px;
+  }
+
+  .location {
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .top-info-bar {
+    min-height: 48px;
+    padding: 6px 3%;
+  }
+
+  .top-info-right {
+    width: 100%;
+    justify-content: space-between;
+    gap: 5px;
+  }
+
+  .top-info-item {
+    gap: 5px;
+  }
+
+  .top-info-item span:last-child {
+    font-size: 9px;
+  }
+
+  .top-info-item small {
+    font-size: 7px;
+    letter-spacing: 0.5px;
+  }
+
+  .top-icon {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+  }
+
+  .timing {
+    display: none;
+  }
+
+}
