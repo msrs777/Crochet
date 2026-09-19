@@ -267,3 +267,105 @@ window.addEventListener(
 
   }
 );
+
+/* ================= HANDMADE QUOTE SLIDER ================= */
+
+const handmadeSlides = document.querySelectorAll(".handmade-slide");
+const handmadeDots = document.querySelectorAll(".handmade-dot");
+
+let handmadeCurrent = 0;
+let handmadeTimer;
+
+function showHandmadeSlide(index) {
+
+  handmadeSlides.forEach((slide) => {
+    slide.classList.remove("active");
+  });
+
+  handmadeDots.forEach((dot) => {
+    dot.classList.remove("active");
+  });
+
+  handmadeSlides[index].classList.add("active");
+  handmadeDots[index].classList.add("active");
+
+  handmadeCurrent = index;
+}
+
+function nextHandmadeSlide() {
+
+  handmadeCurrent++;
+
+  if (handmadeCurrent >= handmadeSlides.length) {
+    handmadeCurrent = 0;
+  }
+
+  showHandmadeSlide(handmadeCurrent);
+}
+
+function previousHandmadeSlide() {
+
+  handmadeCurrent--;
+
+  if (handmadeCurrent < 0) {
+    handmadeCurrent = handmadeSlides.length - 1;
+  }
+
+  showHandmadeSlide(handmadeCurrent);
+}
+
+document
+  .querySelector(".handmade-next")
+  .addEventListener("click", () => {
+
+    nextHandmadeSlide();
+
+    restartHandmadeTimer();
+
+  });
+
+document
+  .querySelector(".handmade-prev")
+  .addEventListener("click", () => {
+
+    previousHandmadeSlide();
+
+    restartHandmadeTimer();
+
+  });
+
+
+handmadeDots.forEach((dot, index) => {
+
+  dot.addEventListener("click", () => {
+
+    showHandmadeSlide(index);
+
+    restartHandmadeTimer();
+
+  });
+
+});
+
+
+function startHandmadeTimer() {
+
+  handmadeTimer = setInterval(() => {
+
+    nextHandmadeSlide();
+
+  }, 5000);
+
+}
+
+
+function restartHandmadeTimer() {
+
+  clearInterval(handmadeTimer);
+
+  startHandmadeTimer();
+
+}
+
+
+startHandmadeTimer();
