@@ -2,183 +2,1563 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Thread & Bloom Crochet</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+    <title>
+        Thread & Bloom Crochet | Handmade Crochet Products
+    </title>
+
+    <meta
+        name="description"
+        content="Shop beautiful handmade crochet flowers, bags, toys, home decor, gifts and custom crochet products.">
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
 </head>
+
 
 <body>
 
-    <!-- Top Bar -->
+
+    <!-- ==========================================
+         TOP INFORMATION BAR
+    =========================================== -->
+
     <div class="top-bar">
-        <span>📍 Bhubaneswar</span>
-        <span>📞 +91 99378 67737</span>
+
+        <div class="top-location">
+
+            📍 Patia, Raghunathpur, Bhubaneswar, Odisha, India
+
+        </div>
+
+
+        <div class="top-right">
+
+            <a href="tel:+919937867737">
+
+                📞 +91 99378 67737
+
+            </a>
+
+
+            <span>
+                xz.com
+            </span>
+
+
+            <span>
+                Mon–Sat 10 AM–10 PM
+            </span>
+
+        </div>
+
     </div>
 
 
-    <!-- Navigation -->
-    <header>
-        <div class="logo">
-            Thread & Bloom
-        </div>
 
-        <nav>
-            <a href="#">Home</a>
-            <a href="#products">Products</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+    <!-- ==========================================
+         MAIN HEADER
+    =========================================== -->
+
+    <header class="main-header">
+
+
+        <!-- BRAND -->
+
+        <a
+            href="#home"
+            class="brand">
+
+
+            <div class="brand-icon">
+
+                🧶
+
+            </div>
+
+
+            <div class="brand-text">
+
+                <h2>
+                    THREAD & BLOOM
+                </h2>
+
+
+                <p>
+                    Handmade • Beautiful • Made with Love
+                </p>
+
+            </div>
+
+
+        </a>
+
+
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <nav class="main-nav">
+
+
+            <a href="#home">
+                Home
+            </a>
+
+
+            <a href="#shop">
+                Shop
+            </a>
+
+
+            <a href="#categories">
+                Categories
+            </a>
+
+
+            <a href="#new-arrivals">
+                New Arrivals
+            </a>
+
+
+            <a href="#about">
+                About
+            </a>
+
+
+            <a href="#reviews">
+                Reviews
+            </a>
+
+
+            <a href="#faq">
+                FAQ
+            </a>
+
+
+            <a href="#contact">
+                Contact
+            </a>
+
+
+            <!-- BOOK NOW -->
+
+            <button
+                type="button"
+                class="book-now-button"
+                onclick="openBookingForm()">
+
+                Book Now
+
+            </button>
+
+
         </nav>
 
-        <button class="cart-button" onclick="openCart()">
-            🛒 Cart <span id="cart-count">0</span>
+
+
+        <!-- MOBILE MENU -->
+
+        <button
+            type="button"
+            class="menu-button"
+            onclick="toggleMobileMenu()"
+            aria-label="Open navigation menu">
+
+            ☰
+
         </button>
+
+
     </header>
 
 
-    <!-- Hero -->
-    <section class="hero">
 
-        <div class="hero-text">
+    <!-- ==========================================
+         MOBILE NAVIGATION
+    =========================================== -->
 
-            <p class="small-title">
-                HANDMADE WITH LOVE
-            </p>
-
-            <h1>
-                A little yarn,
-                <br>
-                a lot of love.
-            </h1>
-
-            <p>
-                Beautiful handmade crochet products,
-                created specially for your home and loved ones.
-            </p>
-
-            <a href="#products" class="shop-button">
-                Shop Now
-            </a>
-
-        </div>
-
-    </section>
+    <nav
+        id="mobile-nav"
+        class="mobile-nav">
 
 
-    <!-- Categories -->
-    <section class="categories">
+        <a
+            href="#home"
+            onclick="closeMobileMenu()">
 
-        <h2>Shop by Category</h2>
+            Home
 
-        <div class="category-container">
-
-            <div class="category">
-                🌸
-                <h3>Flowers</h3>
-            </div>
-
-            <div class="category">
-                👜
-                <h3>Bags</h3>
-            </div>
-
-            <div class="category">
-                🧸
-                <h3>Toys</h3>
-            </div>
-
-            <div class="category">
-                🏠
-                <h3>Home Decor</h3>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Products -->
-    <section id="products" class="products-section">
-
-        <p class="small-title">
-            OUR COLLECTION
-        </p>
-
-        <h2>Featured Products</h2>
-
-        <div id="product-container" class="product-container">
-            <!-- Products will come from JavaScript -->
-        </div>
-
-    </section>
-
-
-    <!-- About -->
-    <section id="about" class="about">
-
-        <div>
-            <p class="small-title">ABOUT US</p>
-
-            <h2>Made by hand.<br>Made with heart.</h2>
-
-            <p>
-                Every crochet piece is carefully handmade
-                with attention to detail. From flowers and
-                bags to home décor and gifts, each product
-                is made to bring something special to your day.
-            </p>
-        </div>
-
-    </section>
-
-
-    <!-- Contact -->
-    <section id="contact" class="contact">
-
-        <h2>Have a question?</h2>
-
-        <p>
-            Contact us for custom crochet products and orders.
-        </p>
-
-        <a href="tel:+919937867737">
-            📞 Call Us
         </a>
 
-    </section>
+
+        <a
+            href="#shop"
+            onclick="closeMobileMenu()">
+
+            Shop
+
+        </a>
 
 
-    <!-- Cart -->
-    <div id="cart" class="cart">
+        <a
+            href="#categories"
+            onclick="closeMobileMenu()">
 
-        <div class="cart-header">
-            <h2>Your Cart</h2>
+            Categories
 
-            <button onclick="closeCart()">✕</button>
-        </div>
+        </a>
 
-        <div id="cart-items"></div>
 
-        <div class="cart-footer">
+        <a
+            href="#new-arrivals"
+            onclick="closeMobileMenu()">
 
-            <h3>
-                Total:
-                ₹<span id="cart-total">0</span>
-            </h3>
+            New Arrivals
 
-            <button class="checkout-button">
-                Checkout
+        </a>
+
+
+        <a
+            href="#about"
+            onclick="closeMobileMenu()">
+
+            About
+
+        </a>
+
+
+        <a
+            href="#reviews"
+            onclick="closeMobileMenu()">
+
+            Reviews
+
+        </a>
+
+
+        <a
+            href="#faq"
+            onclick="closeMobileMenu()">
+
+            FAQ
+
+        </a>
+
+
+        <a
+            href="#contact"
+            onclick="closeMobileMenu()">
+
+            Contact
+
+        </a>
+
+
+        <button
+            type="button"
+            class="mobile-book-button"
+            onclick="openBookingForm(); closeMobileMenu();">
+
+            Book Now
+
+        </button>
+
+
+    </nav>
+
+
+
+    <!-- ==========================================
+         HERO
+    =========================================== -->
+
+    <main>
+
+
+        <section
+            id="home"
+            class="hero">
+
+
+            <!-- HERO TEXT -->
+
+            <div class="hero-content">
+
+
+                <p class="eyebrow">
+
+                    HANDMADE WITH LOVE
+
+                </p>
+
+
+                <h1>
+
+                    A little yarn,
+                    <br>
+                    a lot of love.
+
+                </h1>
+
+
+                <p class="hero-description">
+
+                    Discover beautiful handmade crochet
+                    products created with care, creativity
+                    and lots of love.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+
+                    <a
+                        href="#shop"
+                        class="primary-button">
+
+                        Shop Collection
+
+                    </a>
+
+
+                    <a
+                        href="#categories"
+                        class="secondary-button">
+
+                        Explore Categories
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- HERO ART -->
+
+            <div class="hero-art">
+
+
+                <div class="yarn-circle">
+
+                    🧶
+
+                </div>
+
+
+                <div class="flower-art">
+
+                    🌸
+
+                </div>
+
+
+                <div class="heart-art">
+
+                    🤍
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==========================================
+             CATEGORIES
+        =========================================== -->
+
+        <section
+            id="categories"
+            class="categories-section">
+
+
+            <div class="section-heading">
+
+
+                <p class="eyebrow">
+
+                    EXPLORE
+
+                </p>
+
+
+                <h2>
+
+                    Shop by Category
+
+                </h2>
+
+
+                <p>
+
+                    Find something beautiful for yourself
+                    or someone special.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="category-grid">
+
+
+                <!-- FLOWERS -->
+
+                <button
+                    type="button"
+                    class="category-card"
+                    onclick="filterCategory('Flowers')">
+
+
+                    <span class="category-image">
+
+                        🌸
+
+                    </span>
+
+
+                    <strong>
+
+                        Flowers
+
+                    </strong>
+
+
+                    <small>
+
+                        Handmade blooms
+
+                    </small>
+
+
+                </button>
+
+
+
+                <!-- BAGS -->
+
+                <button
+                    type="button"
+                    class="category-card"
+                    onclick="filterCategory('Bags')">
+
+
+                    <span class="category-image">
+
+                        👜
+
+                    </span>
+
+
+                    <strong>
+
+                        Bags
+
+                    </strong>
+
+
+                    <small>
+
+                        Crochet bags
+
+                    </small>
+
+
+                </button>
+
+
+
+                <!-- TOYS -->
+
+                <button
+                    type="button"
+                    class="category-card"
+                    onclick="filterCategory('Toys')">
+
+
+                    <span class="category-image">
+
+                        🧸
+
+                    </span>
+
+
+                    <strong>
+
+                        Toys
+
+                    </strong>
+
+
+                    <small>
+
+                        Cute handmade toys
+
+                    </small>
+
+
+                </button>
+
+
+
+                <!-- HOME DECOR -->
+
+                <button
+                    type="button"
+                    class="category-card"
+                    onclick="filterCategory('Home Decor')">
+
+
+                    <span class="category-image">
+
+                        🏠
+
+                    </span>
+
+
+                    <strong>
+
+                        Home Decor
+
+                    </strong>
+
+
+                    <small>
+
+                        Beautiful home pieces
+
+                    </small>
+
+
+                </button>
+
+
+
+                <!-- GIFTS -->
+
+                <button
+                    type="button"
+                    class="category-card"
+                    onclick="filterCategory('Gifts')">
+
+
+                    <span class="category-image">
+
+                        🎁
+
+                    </span>
+
+
+                    <strong>
+
+                        Gifts
+
+                    </strong>
+
+
+                    <small>
+
+                        Handmade gifting
+
+                    </small>
+
+
+                </button>
+
+
+
+                <!-- CUSTOM -->
+
+                <button
+                    type="button"
+                    class="category-card"
+                    onclick="filterCategory('Custom')">
+
+
+                    <span class="category-image">
+
+                        ✨
+
+                    </span>
+
+
+                    <strong>
+
+                        Custom Crochet
+
+                    </strong>
+
+
+                    <small>
+
+                        Made specially for you
+
+                    </small>
+
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==========================================
+             SHOP
+        =========================================== -->
+
+        <section
+            id="shop"
+            class="shop-section">
+
+
+            <div class="section-heading">
+
+
+                <p class="eyebrow">
+
+                    OUR COLLECTION
+
+                </p>
+
+
+                <h2>
+
+                    Handmade Crochet Products
+
+                </h2>
+
+
+                <p>
+
+                    Choose your favourite and order directly
+                    through WhatsApp.
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- SEARCH AND CATEGORY FILTER -->
+
+            <div class="shop-controls">
+
+
+                <div class="search-box">
+
+
+                    <span>
+
+                        🔍
+
+                    </span>
+
+
+                    <input
+                        type="search"
+                        id="product-search"
+                        placeholder="Search crochet products..."
+                        oninput="searchProducts()">
+
+
+                </div>
+
+
+
+                <select
+                    id="category-filter"
+                    onchange="filterProducts()">
+
+
+                    <option value="All">
+
+                        All Categories
+
+                    </option>
+
+
+                    <option value="Flowers">
+
+                        Flowers
+
+                    </option>
+
+
+                    <option value="Bags">
+
+                        Bags
+
+                    </option>
+
+
+                    <option value="Toys">
+
+                        Toys
+
+                    </option>
+
+
+                    <option value="Home Decor">
+
+                        Home Decor
+
+                    </option>
+
+
+                    <option value="Gifts">
+
+                        Gifts
+
+                    </option>
+
+
+                    <option value="Custom">
+
+                        Custom Crochet
+
+                    </option>
+
+
+                </select>
+
+
+            </div>
+
+
+
+            <!-- PRODUCT GRID -->
+
+            <div
+                id="product-container"
+                class="product-grid">
+
+            </div>
+
+
+
+            <!-- NO PRODUCTS -->
+
+            <p
+                id="no-products"
+                class="no-products">
+
+                No products found.
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- ==========================================
+             NEW ARRIVALS
+        =========================================== -->
+
+        <section
+            id="new-arrivals"
+            class="new-arrivals-section">
+
+
+            <div class="section-heading">
+
+
+                <p class="eyebrow">
+
+                    JUST ADDED
+
+                </p>
+
+
+                <h2>
+
+                    New Arrivals
+
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="new-arrival-content">
+
+
+                <div class="new-arrival-art">
+
+                    🧶🌸
+
+                </div>
+
+
+                <div>
+
+
+                    <h3>
+
+                        Something new is being handmade.
+
+                    </h3>
+
+
+                    <p>
+
+                        We regularly create new crochet
+                        designs. Contact us on WhatsApp
+                        to see the latest pieces.
+
+                    </p>
+
+
+                    <a
+                        href="https://wa.me/919937867737"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="primary-button">
+
+                        See New Designs
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==========================================
+             ABOUT
+        =========================================== -->
+
+        <section
+            id="about"
+            class="about-section">
+
+
+            <div class="about-content">
+
+
+                <p class="eyebrow">
+
+                    ABOUT THREAD & BLOOM
+
+                </p>
+
+
+                <h2>
+
+                    Made by hand.
+                    <br>
+                    Made with heart.
+
+                </h2>
+
+
+                <p>
+
+                    At Thread & Bloom Crochet, every piece
+                    is handmade with patience, creativity
+                    and attention to detail.
+
+                </p>
+
+
+                <p>
+
+                    From colourful flowers and stylish bags
+                    to cute toys, home décor and thoughtful
+                    gifts, our crochet creations are made
+                    to add warmth and personality to everyday
+                    life.
+
+                </p>
+
+
+                <a
+                    href="#shop"
+                    class="primary-button">
+
+                    Explore Our Products
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==========================================
+             REVIEWS
+        =========================================== -->
+
+        <section
+            id="reviews"
+            class="reviews-section">
+
+
+            <div class="section-heading">
+
+
+                <p class="eyebrow">
+
+                    CUSTOMER LOVE
+
+                </p>
+
+
+                <h2>
+
+                    What Our Customers Say
+
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="reviews-grid">
+
+
+                <div class="review-card">
+
+
+                    <div class="stars">
+
+                        ★★★★★
+
+                    </div>
+
+
+                    <p>
+
+                        Beautiful handmade work.
+                        The finishing is lovely.
+
+                    </p>
+
+
+                    <strong>
+
+                        Happy Customer
+
+                    </strong>
+
+
+                </div>
+
+
+
+                <div class="review-card">
+
+
+                    <div class="stars">
+
+                        ★★★★★
+
+                    </div>
+
+
+                    <p>
+
+                        The crochet flower looked
+                        even better in person.
+
+                    </p>
+
+
+                    <strong>
+
+                        Happy Customer
+
+                    </strong>
+
+
+                </div>
+
+
+
+                <div class="review-card">
+
+
+                    <div class="stars">
+
+                        ★★★★★
+
+                    </div>
+
+
+                    <p>
+
+                        Very cute and handmade with care.
+                        Loved the product.
+
+                    </p>
+
+
+                    <strong>
+
+                        Happy Customer
+
+                    </strong>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==========================================
+             FAQ
+        =========================================== -->
+
+        <section
+            id="faq"
+            class="faq-section">
+
+
+            <div class="section-heading">
+
+
+                <p class="eyebrow">
+
+                    HELP
+
+                </p>
+
+
+                <h2>
+
+                    Frequently Asked Questions
+
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="faq-container">
+
+
+                <details>
+
+
+                    <summary>
+
+                        How can I order a product?
+
+                    </summary>
+
+
+                    <p>
+
+                        Select a product and click
+                        "Order on WhatsApp". We will
+                        discuss availability, delivery
+                        and payment with you.
+
+                    </p>
+
+
+                </details>
+
+
+
+                <details>
+
+
+                    <summary>
+
+                        Can I request a custom crochet product?
+
+                    </summary>
+
+
+                    <p>
+
+                        Yes. Contact us on WhatsApp and
+                        tell us what you would like to
+                        have made.
+
+                    </p>
+
+
+                </details>
+
+
+
+                <details>
+
+
+                    <summary>
+
+                        Are the products handmade?
+
+                    </summary>
+
+
+                    <p>
+
+                        Yes. Our crochet products are
+                        handmade with care.
+
+                    </p>
+
+
+                </details>
+
+
+
+                <details>
+
+
+                    <summary>
+
+                        Do you provide delivery?
+
+                    </summary>
+
+
+                    <p>
+
+                        Delivery availability depends
+                        on the product and location.
+                        Contact us for details.
+
+                    </p>
+
+
+                </details>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==========================================
+             CONTACT
+        =========================================== -->
+
+        <section
+            id="contact"
+            class="contact-section">
+
+
+            <div>
+
+
+                <p class="eyebrow">
+
+                    GET IN TOUCH
+
+                </p>
+
+
+                <h2>
+
+                    Have something special in mind?
+
+                </h2>
+
+
+                <p>
+
+                    Talk to us about products,
+                    custom designs or orders.
+
+                </p>
+
+
+                <div class="contact-buttons">
+
+
+                    <a
+                        href="https://wa.me/919937867737"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="primary-button">
+
+                        💬 WhatsApp Us
+
+                    </a>
+
+
+                    <a
+                        href="tel:+919937867737"
+                        class="secondary-button">
+
+                        📞 Call Us
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==========================================
+         BOOK NOW POPUP
+    =========================================== -->
+
+    <div
+        id="booking-modal"
+        class="booking-modal">
+
+
+        <div class="booking-box">
+
+
+            <!-- CLOSE -->
+
+            <button
+                type="button"
+                class="close-booking"
+                onclick="closeBookingForm()"
+                aria-label="Close">
+
+                ×
+
             </button>
 
+
+
+            <!-- TITLE -->
+
+            <h2>
+
+                Book Now
+
+            </h2>
+
+
+            <p class="booking-intro">
+
+                Fill in your details and we will
+                contact you on WhatsApp.
+
+            </p>
+
+
+
+            <!-- FORM -->
+
+            <form
+                id="booking-form"
+                onsubmit="sendBookingToWhatsApp(event)">
+
+
+                <!-- NAME -->
+
+                <label for="customer-name">
+
+                    Name *
+
+                </label>
+
+
+                <input
+                    type="text"
+                    id="customer-name"
+                    placeholder="Enter your name"
+                    required>
+
+
+                <span
+                    id="name-error"
+                    class="form-error">
+
+                </span>
+
+
+
+                <!-- PHONE -->
+
+                <label for="customer-phone">
+
+                    Phone *
+
+                </label>
+
+
+                <input
+                    type="tel"
+                    id="customer-phone"
+                    placeholder="Enter your phone number"
+                    required>
+
+
+                <span
+                    id="phone-error"
+                    class="form-error">
+
+                </span>
+
+
+
+                <!-- PRODUCT -->
+
+                <label for="booking-product">
+
+                    Product *
+
+                </label>
+
+
+                <select
+                    id="booking-product"
+                    required>
+
+
+                    <option value="">
+
+                        Please select a product
+
+                    </option>
+
+
+                    <option value="Crochet Flower">
+
+                        Crochet Flower
+
+                    </option>
+
+
+                    <option value="Crochet Handbag">
+
+                        Crochet Handbag
+
+                    </option>
+
+
+                    <option value="Crochet Teddy">
+
+                        Crochet Teddy
+
+                    </option>
+
+
+                    <option value="Crochet Home Decor">
+
+                        Crochet Home Decor
+
+                    </option>
+
+
+                    <option value="Crochet Gift Set">
+
+                        Crochet Gift Set
+
+                    </option>
+
+
+                    <option value="Custom Crochet Creation">
+
+                        Custom Crochet Creation
+
+                    </option>
+
+
+                </select>
+
+
+
+                <!-- DETAILS -->
+
+                <label for="booking-details">
+
+                    Additional Details
+
+                </label>
+
+
+                <textarea
+                    id="booking-details"
+                    rows="4"
+                    placeholder="Tell us what you need..."></textarea>
+
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="quote-button">
+
+                    Get Free Quote
+
+                </button>
+
+
+            </form>
+
+
         </div>
+
 
     </div>
 
 
-    <!-- JavaScript -->
+
+    <!-- ==========================================
+         FLOATING WHATSAPP
+         BOTTOM RIGHT ONLY
+    =========================================== -->
+
+    <a
+        href="https://wa.me/919937867737"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="whatsapp-button"
+        aria-label="Chat on WhatsApp">
+
+
+        <svg
+            viewBox="0 0 32 32"
+            aria-hidden="true">
+
+
+            <path
+                d="M19.11 17.21c-.27-.14-1.59-.78-1.84-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.33-.79-.7-1.33-1.56-1.49-1.82-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.81c.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.57.66.21 1.26.18 1.73.11.53-.08 1.59-.65 1.81-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+
+
+            <path
+                d="M16.02 3C8.84 3 3 8.79 3 15.92c0 2.28.6 4.5 1.73 6.46L3 29l6.79-1.7a13.1 13.1 0 006.23 1.57h.01C23.2 28.87 29 23.07 29 15.94 29 8.81 23.2 3 16.02 3zm0 23.69h-.01c-1.98 0-3.92-.53-5.61-1.53l-.4-.24-4.03 1.01 1.08-3.93-.26-.4a10.76 10.76 0 01-1.65-5.68c0-5.91 4.84-10.72 10.79-10.72 2.87 0 5.57 1.11 7.6 3.13a10.65 10.65 0 013.15 7.59c0 5.91-4.83 10.72-10.66 10.77z"/>
+
+
+        </svg>
+
+
+    </a>
+
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer>
+
+
+        <div class="footer-brand">
+
+
+            <h3>
+
+                🧶 Thread & Bloom Crochet
+
+            </h3>
+
+
+            <p>
+
+                Handmade • Beautiful • Made with Love
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+
+            <a href="#home">
+                Home
+            </a>
+
+
+            <a href="#shop">
+                Shop
+            </a>
+
+
+            <a href="#categories">
+                Categories
+            </a>
+
+
+            <a href="#about">
+                About
+            </a>
+
+
+            <a href="#contact">
+                Contact
+            </a>
+
+
+        </div>
+
+
+
+        <p class="copyright">
+
+            © 2026 Thread & Bloom Crochet.
+            Handmade with love.
+
+        </p>
+
+
+    </footer>
+
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
     <script src="script.js"></script>
+
 
 </body>
 
