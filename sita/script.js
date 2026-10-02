@@ -5,7 +5,7 @@
    WHATSAPP NUMBER
 ===================================================== */
 
-const WHATSAPP_NUMBER = "919937867737";
+const WHATSAPP_NUMBER = "9194384 08070";
 
 
 /* =====================================================
@@ -301,7 +301,7 @@ function orderProduct(productId) {
 
     const message =
 
-        "🧶 Hello Thread & Bloom Crochet!\n\n" +
+        "🧶 Hello Sita Art & Craft Crochet!\n\n" +
 
         "I am interested in this product:\n\n" +
 
@@ -652,7 +652,7 @@ function sendBookingToWhatsApp(event) {
 
     let message =
 
-        "🧶 Hello Thread & Bloom Crochet!\n\n" +
+        "🧶 Hello Sita Art & Craft Crochet!\n\n" +
 
         "I would like to enquire about a product.\n\n" +
 
