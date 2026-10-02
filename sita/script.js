@@ -2,10 +2,10 @@
 
 
 /* =====================================================
-   WHATSAPP NUMBER
+   WHATSAPP
 ===================================================== */
 
-const WHATSAPP_NUMBER = "9194384 08070";
+const WHATSAPP_NUMBER = "919438408070";
 
 
 /* =====================================================
@@ -16,71 +16,129 @@ const products = [
 
     {
         id: 1,
+
         name: "Crochet Flower",
+
         category: "Flowers",
+
         price: 199,
+
         icon: "🌸",
+
         description:
             "A beautiful handmade crochet flower, perfect for gifts, decoration and special occasions.",
+
         newArrival: true
     },
+
 
     {
         id: 2,
+
         name: "Crochet Handbag",
+
         category: "Bags",
+
         price: 799,
+
         icon: "👜",
+
         description:
             "A stylish handmade crochet handbag made for everyday use and special outings.",
+
         newArrival: false
     },
+
 
     {
         id: 3,
+
         name: "Crochet Teddy",
+
         category: "Toys",
+
         price: 599,
+
         icon: "🧸",
+
         description:
             "A cute handmade crochet teddy that makes a lovely gift for someone special.",
+
         newArrival: true
     },
+
 
     {
         id: 4,
+
         name: "Crochet Home Decor",
+
         category: "Home Decor",
+
         price: 399,
+
         icon: "🏠",
+
         description:
             "Handmade crochet décor to add a warm and beautiful touch to your home.",
+
         newArrival: false
     },
 
+
     {
         id: 5,
+
         name: "Crochet Gift Set",
+
         category: "Gifts",
+
         price: 499,
+
         icon: "🎁",
+
         description:
             "A thoughtful handmade crochet gift for birthdays, celebrations and special moments.",
+
         newArrival: true
     },
 
+
     {
         id: 6,
+
         name: "Custom Crochet Creation",
+
         category: "Custom",
+
         price: 0,
+
         icon: "✨",
+
         description:
             "Have something special in mind? Contact us to discuss a custom crochet creation.",
+
         newArrival: true
     }
 
 ];
+
+
+/* =====================================================
+   PRICE FORMAT
+===================================================== */
+
+function getPriceText(product) {
+
+    if (product.price === 0) {
+
+        return "Custom Price";
+
+    }
+
+    return "₹" + product.price;
+
+}
 
 
 /* =====================================================
@@ -95,59 +153,94 @@ function displayProducts(list = products) {
     const noProducts =
         document.getElementById("no-products");
 
+
     if (!container) {
         return;
     }
 
+
     container.innerHTML = "";
+
 
     if (list.length === 0) {
 
         if (noProducts) {
+
             noProducts.style.display = "block";
+
         }
 
         return;
+
     }
 
+
     if (noProducts) {
+
         noProducts.style.display = "none";
+
     }
+
 
     list.forEach(product => {
 
-        const priceHTML =
-            product.price === 0
-                ? "Custom Price"
-                : "₹" + product.price;
+        const priceText =
+            getPriceText(product);
+
+
+        const newBadge =
+            product.newArrival
+                ? `<span class="new-badge">NEW</span>`
+                : "";
+
 
         container.innerHTML += `
 
             <article class="product-card">
 
+
                 <div class="product-image">
+
                     ${product.icon}
+
+                    ${newBadge}
+
                 </div>
+
 
                 <div class="product-info">
 
+
                     <div class="product-category">
+
                         ${product.category}
+
                     </div>
+
 
                     <h3 class="product-name">
+
                         ${product.name}
+
                     </h3>
 
+
                     <p class="product-description">
+
                         ${product.description}
+
                     </p>
 
+
                     <div class="product-price">
-                        ${priceHTML}
+
+                        ${priceText}
+
                     </div>
 
+
                     <div class="product-actions">
+
 
                         <button
                             type="button"
@@ -158,6 +251,7 @@ function displayProducts(list = products) {
 
                         </button>
 
+
                         <button
                             type="button"
                             class="order-button"
@@ -167,9 +261,12 @@ function displayProducts(list = products) {
 
                         </button>
 
+
                     </div>
 
+
                 </div>
+
 
             </article>
 
@@ -192,38 +289,63 @@ function searchProducts() {
     const categorySelect =
         document.getElementById("category-filter");
 
+
     if (!searchInput || !categorySelect) {
+
         return;
+
     }
+
 
     const searchText =
         searchInput.value
             .trim()
             .toLowerCase();
 
+
     const selectedCategory =
         categorySelect.value;
+
 
     const filtered =
         products.filter(product => {
 
+
             const matchesSearch =
+
                 product.name
                     .toLowerCase()
                     .includes(searchText)
+
                 ||
+
                 product.category
+                    .toLowerCase()
+                    .includes(searchText)
+
+                ||
+
+                product.description
                     .toLowerCase()
                     .includes(searchText);
 
+
             const matchesCategory =
+
                 selectedCategory === "All"
+
                 ||
+
                 product.category === selectedCategory;
 
-            return matchesSearch && matchesCategory;
+
+            return (
+                matchesSearch &&
+                matchesCategory
+            );
 
         });
+
 
     displayProducts(filtered);
 
@@ -256,22 +378,33 @@ function filterCategory(category) {
     const shop =
         document.getElementById("shop");
 
+
     if (!select) {
+
         return;
+
     }
+
 
     select.value = category;
 
+
     if (search) {
+
         search.value = "";
+
     }
 
+
     searchProducts();
+
 
     if (shop) {
 
         shop.scrollIntoView({
+
             behavior: "smooth"
+
         });
 
     }
@@ -280,7 +413,7 @@ function filterCategory(category) {
 
 
 /* =====================================================
-   ORDER PRODUCT ON WHATSAPP
+   ORDER PRODUCT
 ===================================================== */
 
 function orderProduct(productId) {
@@ -290,18 +423,21 @@ function orderProduct(productId) {
             item => item.id === productId
         );
 
+
     if (!product) {
+
         return;
+
     }
 
+
     const priceText =
-        product.price === 0
-            ? "Custom Price"
-            : "₹" + product.price;
+        getPriceText(product);
+
 
     const message =
 
-        "🧶 Hello Sita Art & Craft Crochet!\n\n" +
+        "🧶 Hello Sita Art & Craft!\n\n" +
 
         "I am interested in this product:\n\n" +
 
@@ -317,19 +453,37 @@ function orderProduct(productId) {
         priceText +
         "\n\n" +
 
-        "Please let me know about availability and delivery.\n\n" +
+        "Please let me know about availability, delivery and payment.\n\n" +
 
         "Thank you!";
 
+
+    openWhatsApp(message);
+
+}
+
+
+/* =====================================================
+   OPEN WHATSAPP
+===================================================== */
+
+function openWhatsApp(message) {
+
     const whatsappURL =
+
         "https://wa.me/" +
+
         WHATSAPP_NUMBER +
+
         "?text=" +
+
         encodeURIComponent(message);
+
 
     window.open(
         whatsappURL,
-        "_blank"
+        "_blank",
+        "noopener,noreferrer"
     );
 
 }
@@ -346,48 +500,71 @@ function openProductModal(productId) {
             item => item.id === productId
         );
 
+
     if (!product) {
+
         return;
+
     }
+
 
     const modal =
         document.getElementById("product-modal");
+
 
     const content =
         document.getElementById(
             "modal-product-content"
         );
 
+
     if (!modal || !content) {
+
         return;
+
     }
 
+
     const priceText =
-        product.price === 0
-            ? "Custom Price"
-            : "₹" + product.price;
+        getPriceText(product);
+
 
     content.innerHTML = `
 
         <div class="modal-product-image">
+
             ${product.icon}
+
         </div>
+
 
         <div class="modal-product-category">
+
             ${product.category}
+
         </div>
+
 
         <h2 class="modal-product-title">
+
             ${product.name}
+
         </h2>
 
+
         <div class="modal-product-price">
+
             ${priceText}
+
         </div>
 
+
         <p class="modal-product-description">
+
             ${product.description}
+
         </p>
+
 
         <button
             type="button"
@@ -400,9 +577,18 @@ function openProductModal(productId) {
 
     `;
 
+
     modal.classList.add("show");
 
-    document.body.classList.add("modal-open");
+    modal.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+
+    document.body.classList.add(
+        "modal-open"
+    );
 
 }
 
@@ -416,39 +602,28 @@ function closeProductModal() {
     const modal =
         document.getElementById("product-modal");
 
+
     if (!modal) {
+
         return;
+
     }
+
 
     modal.classList.remove("show");
 
-    document.body.classList.remove("modal-open");
+
+    modal.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+
+    document.body.classList.remove(
+        "modal-open"
+    );
 
 }
-
-
-/* =====================================================
-   PRODUCT MODAL - CLICK OUTSIDE
-===================================================== */
-
-document.addEventListener(
-    "click",
-    function(event) {
-
-        const modal =
-            document.getElementById("product-modal");
-
-        if (
-            modal &&
-            event.target === modal
-        ) {
-
-            closeProductModal();
-
-        }
-
-    }
-);
 
 
 /* =====================================================
@@ -460,9 +635,13 @@ function toggleMobileMenu() {
     const menu =
         document.getElementById("mobile-nav");
 
+
     if (!menu) {
+
         return;
+
     }
+
 
     menu.classList.toggle("show");
 
@@ -478,9 +657,13 @@ function closeMobileMenu() {
     const menu =
         document.getElementById("mobile-nav");
 
+
     if (!menu) {
+
         return;
+
     }
+
 
     menu.classList.remove("show");
 
@@ -496,20 +679,26 @@ function openBookingForm() {
     const modal =
         document.getElementById("booking-modal");
 
+
     const productSelect =
-        document.getElementById("booking-product");
+        document.getElementById(
+            "booking-product"
+        );
+
 
     if (!modal || !productSelect) {
+
         return;
+
     }
 
-
-    /* Fill product list */
 
     productSelect.innerHTML = `
 
         <option value="">
+
             Please select a product
+
         </option>
 
     `;
@@ -520,7 +709,9 @@ function openBookingForm() {
         productSelect.innerHTML += `
 
             <option value="${product.name}">
+
                 ${product.name}
+
             </option>
 
         `;
@@ -530,7 +721,16 @@ function openBookingForm() {
 
     modal.classList.add("show");
 
-    document.body.classList.add("modal-open");
+
+    modal.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+
+    document.body.classList.add(
+        "modal-open"
+    );
 
 }
 
@@ -542,15 +742,30 @@ function openBookingForm() {
 function closeBookingForm() {
 
     const modal =
-        document.getElementById("booking-modal");
+        document.getElementById(
+            "booking-modal"
+        );
+
 
     if (!modal) {
+
         return;
+
     }
+
 
     modal.classList.remove("show");
 
-    document.body.classList.remove("modal-open");
+
+    modal.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+
+    document.body.classList.remove(
+        "modal-open"
+    );
 
 }
 
@@ -564,52 +779,96 @@ function sendBookingToWhatsApp(event) {
     event.preventDefault();
 
 
-    const name =
-        document
-            .getElementById("customer-name")
-            .value
-            .trim();
+    const nameElement =
+        document.getElementById(
+            "customer-name"
+        );
 
 
-    const phone =
-        document
-            .getElementById("customer-phone")
-            .value
-            .trim();
+    const phoneElement =
+        document.getElementById(
+            "customer-phone"
+        );
 
 
-    const product =
-        document
-            .getElementById("booking-product")
-            .value;
+    const productElement =
+        document.getElementById(
+            "booking-product"
+        );
 
 
-    const details =
-        document
-            .getElementById("booking-details")
-            .value
-            .trim();
+    const detailsElement =
+        document.getElementById(
+            "booking-details"
+        );
 
 
     const nameError =
-        document.getElementById("name-error");
+        document.getElementById(
+            "name-error"
+        );
 
 
     const phoneError =
-        document.getElementById("phone-error");
+        document.getElementById(
+            "phone-error"
+        );
 
 
-    nameError.textContent = "";
+    if (
+        !nameElement ||
+        !phoneElement ||
+        !productElement ||
+        !detailsElement
+    ) {
 
-    phoneError.textContent = "";
+        return;
+
+    }
+
+
+    const name =
+        nameElement.value.trim();
+
+
+    const phone =
+        phoneElement.value.trim();
+
+
+    const product =
+        productElement.value;
+
+
+    const details =
+        detailsElement.value.trim();
+
+
+    if (nameError) {
+
+        nameError.textContent = "";
+
+    }
+
+
+    if (phoneError) {
+
+        phoneError.textContent = "";
+
+    }
 
 
     /* NAME VALIDATION */
 
     if (!name) {
 
-        nameError.textContent =
-            "Name is required";
+        if (nameError) {
+
+            nameError.textContent =
+                "Name is required.";
+
+        }
+
+        nameElement.focus();
 
         return;
 
@@ -627,8 +886,14 @@ function sendBookingToWhatsApp(event) {
         phoneDigits.length > 15
     ) {
 
-        phoneError.textContent =
-            "Valid phone number is required";
+        if (phoneError) {
+
+            phoneError.textContent =
+                "Please enter a valid phone number.";
+
+        }
+
+        phoneElement.focus();
 
         return;
 
@@ -640,19 +905,21 @@ function sendBookingToWhatsApp(event) {
     if (!product) {
 
         alert(
-            "Please select a product"
+            "Please select a product."
         );
+
+        productElement.focus();
 
         return;
 
     }
 
 
-    /* CREATE WHATSAPP MESSAGE */
+    /* WHATSAPP MESSAGE */
 
     let message =
 
-        "🧶 Hello Sita Art & Craft Crochet!\n\n" +
+        "🧶 Hello Sita Art & Craft!\n\n" +
 
         "I would like to enquire about a product.\n\n" +
 
@@ -680,58 +947,66 @@ function sendBookingToWhatsApp(event) {
 
     message +=
 
-        "\n\nPlease contact me regarding this request.";
+        "\n\nPlease contact me regarding this request.\n\n" +
+
+        "Thank you!";
 
 
-    /* WHATSAPP URL */
+    openWhatsApp(message);
 
-    const whatsappURL =
-
-        "https://wa.me/" +
-        WHATSAPP_NUMBER +
-        "?text=" +
-        encodeURIComponent(message);
-
-
-    /* OPEN WHATSAPP */
-
-    window.open(
-        whatsappURL,
-        "_blank"
-    );
-
-
-    /* CLOSE */
 
     closeBookingForm();
 
 
-    /* RESET */
-
     const form =
-        document.getElementById("booking-form");
+        document.getElementById(
+            "booking-form"
+        );
+
 
     if (form) {
+
         form.reset();
+
     }
 
 }
 
 
 /* =====================================================
-   BOOKING MODAL - CLICK OUTSIDE
+   MODAL CLICK OUTSIDE
 ===================================================== */
 
 document.addEventListener(
     "click",
     function(event) {
 
-        const modal =
-            document.getElementById("booking-modal");
+
+        const productModal =
+            document.getElementById(
+                "product-modal"
+            );
+
 
         if (
-            modal &&
-            event.target === modal
+            productModal &&
+            event.target === productModal
+        ) {
+
+            closeProductModal();
+
+        }
+
+
+        const bookingModal =
+            document.getElementById(
+                "booking-modal"
+            );
+
+
+        if (
+            bookingModal &&
+            event.target === bookingModal
         ) {
 
             closeBookingForm();
@@ -755,6 +1030,8 @@ document.addEventListener(
             closeProductModal();
 
             closeBookingForm();
+
+            closeMobileMenu();
 
         }
 
