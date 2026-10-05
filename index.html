@@ -9,13 +9,17 @@
         name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-    <title>
-        Thread & Bloom Crochet | Handmade Crochet Products
-    </title>
-
     <meta
         name="description"
-        content="Shop beautiful handmade crochet flowers, bags, toys, home decor, gifts and custom crochet products.">
+        content="Sita Art & Craft - Handmade crochet flowers, bags, toys, home decor, gifts and custom crochet creations in Cuttack, Odisha.">
+
+    <meta
+        name="keywords"
+        content="crochet, handmade gifts, crochet flowers, crochet bags, crochet toys, Cuttack, Odisha, Sita Art & Craft">
+
+    <title>
+        Sita Art & Craft | Handmade Crochet Products
+    </title>
 
     <link
         rel="stylesheet"
@@ -27,35 +31,48 @@
 <body>
 
 
-    <!-- ==========================================
-         TOP INFORMATION BAR
-    =========================================== -->
+    <!-- =====================================================
+         TOP BAR
+    ====================================================== -->
 
     <div class="top-bar">
 
         <div class="top-location">
 
-            📍 Patia, Raghunathpur, Bhubaneswar, Odisha, India
+    <a
+        href="https://www.google.com/maps/search/?api=1&query=Kali+Gali,+Opp.+High+Court,+Oriya+Bazar,+Cuttack,+Odisha+753002"
+        target="_blank"
+        rel="noopener noreferrer">
 
-        </div>
+        📍 Kali Gali, Opp. High Court, Oriya Bazar,
+        Cuttack, Odisha 753002
+
+    </a>
+
+</div>
 
 
         <div class="top-right">
 
-            <a href="tel:+919937867737">
+            <a href="tel:+919438408070">
 
-                📞 +91 99378 67737
+                📞 +91 94384 08070
 
             </a>
 
 
-            <span>
-                xz.com
-            </span>
+            <button
+    type="button"
+    class="courses-button"
+    onclick="openCoursesMenu()">
+
+    Courses
+
+</button>
 
 
             <span>
-                Mon–Sat 10 AM–10 PM
+                Mon–Fri 10 AM–5 PM
             </span>
 
         </div>
@@ -64,40 +81,33 @@
 
 
 
-    <!-- ==========================================
-         MAIN HEADER
-    =========================================== -->
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
     <header class="main-header">
 
-
-        <!-- BRAND -->
 
         <a
             href="#home"
             class="brand">
 
-
             <div class="brand-icon">
-
                 🧶
-
             </div>
 
 
             <div class="brand-text">
 
                 <h2>
-                    THREAD & BLOOM
+                    Sita Art & Craft
                 </h2>
-
 
                 <p>
                     Handmade • Beautiful • Made with Love
                 </p>
 
             </div>
-
 
         </a>
 
@@ -107,83 +117,151 @@
 
         <nav class="main-nav">
 
-
             <a href="#home">
                 Home
             </a>
 
-
-            <a href="#shop">
-                Shop
-            </a>
-
-
-            <a href="#categories">
-                Categories
-            </a>
-
-
-            <a href="#new-arrivals">
-                New Arrivals
-            </a>
-
-
             <a href="#about">
                 About
             </a>
-
-
-            <a href="#reviews">
-                Reviews
-            </a>
-
 
             <a href="#faq">
                 FAQ
             </a>
 
 
-            <a href="#contact">
-                Contact
-            </a>
-
-
-            <!-- BOOK NOW -->
-
             <button
                 type="button"
                 class="book-now-button"
                 onclick="openBookingForm()">
 
-                Book Now
+                Order Now
 
             </button>
-
 
         </nav>
 
 
 
-        <!-- MOBILE MENU -->
+        <!-- MOBILE MENU BUTTON -->
 
         <button
             type="button"
             class="menu-button"
             onclick="toggleMobileMenu()"
-            aria-label="Open navigation menu">
+            aria-label="Open menu">
 
             ☰
 
         </button>
 
-
     </header>
 
+<!-- =====================================================
+     COURSES MENU
+===================================================== -->
+
+<div
+    id="courses-menu"
+    class="courses-menu"
+    aria-hidden="true">
+
+    <div class="courses-menu-box">
+
+        <button
+            type="button"
+            class="courses-close"
+            onclick="closeCoursesMenu()">
+
+            ×
+
+        </button>
 
 
-    <!-- ==========================================
+        <!-- COURSE INTRO -->
+
+        <div class="courses-intro">
+
+            <p class="eyebrow">
+                LEARN WITH US
+            </p>
+
+            <h2>
+                Learn with Sita Art & Craft
+            </h2>
+
+            <p>
+                Online and offline courses to grow your
+                crochet skills — join classes, get kits,
+                and receive hands-on feedback.
+            </p>
+
+            <button
+                type="button"
+                class="primary-button"
+                onclick="document.getElementById('course-options').scrollIntoView({ behavior: 'smooth' });">
+
+                Browse Courses
+
+            </button>
+
+        </div>
+
+
+        <!-- COURSE OPTIONS -->
+
+        <div
+            id="course-options"
+            class="course-options">
+
+            <button
+                type="button"
+                class="course-option"
+                onclick="selectCourse('Online Classes')">
+
+                <span>
+                    💻
+                </span>
+
+                <strong>
+                    Online Classes
+                </strong>
+
+                <small>
+                    Learn crochet from home
+                </small>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="course-option"
+                onclick="selectCourse('Offline Classes')">
+
+                <span>
+                    🏠
+                </span>
+
+                <strong>
+                    Offline Classes
+                </strong>
+
+                <small>
+                    Learn crochet in person
+                </small>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- =====================================================
          MOBILE NAVIGATION
-    =========================================== -->
+    ====================================================== -->
 
     <nav
         id="mobile-nav"
@@ -200,46 +278,10 @@
 
 
         <a
-            href="#shop"
-            onclick="closeMobileMenu()">
-
-            Shop
-
-        </a>
-
-
-        <a
-            href="#categories"
-            onclick="closeMobileMenu()">
-
-            Categories
-
-        </a>
-
-
-        <a
-            href="#new-arrivals"
-            onclick="closeMobileMenu()">
-
-            New Arrivals
-
-        </a>
-
-
-        <a
             href="#about"
             onclick="closeMobileMenu()">
 
             About
-
-        </a>
-
-
-        <a
-            href="#reviews"
-            onclick="closeMobileMenu()">
-
-            Reviews
 
         </a>
 
@@ -253,135 +295,239 @@
         </a>
 
 
-        <a
-            href="#contact"
-            onclick="closeMobileMenu()">
-
-            Contact
-
-        </a>
-
-
         <button
             type="button"
             class="mobile-book-button"
             onclick="openBookingForm(); closeMobileMenu();">
 
-            Book Now
+            Order Now
 
         </button>
-
 
     </nav>
 
 
 
-    <!-- ==========================================
-         HERO
-    =========================================== -->
-
     <main>
 
 
-        <section
-            id="home"
-            class="hero">
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <!-- =====================================================
+     MAIN CROCHET IMAGE SLIDER
+===================================================== -->
+
+<section id="home" class="hero">
+
+    <!-- Real Crochet Image Slides -->
+    <div class="hero-slider">
+
+    <div class="hero-slide active">
+        <img src="images/hero/crochet-1-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-2-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-3-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-4-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-5-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-6-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-7-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-8-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-9-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-10-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-11-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-12-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-13-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-14-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-15-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-16-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-17-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-18-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-19-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-20-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-21-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-22-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-23-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-24-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-25-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-26-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-27-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-28-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-29-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-30-hero.jpg" alt="Handmade crochet">
+    </div>
+
+    <div class="hero-slide">
+        <img src="images/hero/crochet-31-hero.jpg" alt="Handmade crochet">
+    </div>
+
+</div>
 
 
-            <!-- HERO TEXT -->
-
-            <div class="hero-content">
-
-
-                <p class="eyebrow">
-
-                    HANDMADE WITH LOVE
-
-                </p>
+    <!-- Soft overlay -->
+    <div class="hero-overlay"></div>
 
 
-                <h1>
+    <!-- Hero Content -->
+    <div class="hero-content">
 
-                    A little yarn,
-                    <br>
-                    a lot of love.
+        <p class="eyebrow">
+            HANDMADE WITH LOVE
+        </p>
 
-                </h1>
+        <h1>
+            A little yarn,<br>
+            a lot of love.
+        </h1>
 
+        <p class="hero-description">
+            Discover beautiful handmade crochet
+            products created with care, creativity
+            and lots of love.
+        </p>
 
-                <p class="hero-description">
+        <div class="hero-buttons">
 
-                    Discover beautiful handmade crochet
-                    products created with care, creativity
-                    and lots of love.
+            <a
+                href="#shop"
+                class="primary-button">
+                Shop Collection
+            </a>
 
-                </p>
+            <a
+                href="#categories"
+                class="secondary-button">
+                Explore Categories
+            </a>
 
+        </div>
 
-                <div class="hero-buttons">
-
-
-                    <a
-                        href="#shop"
-                        class="primary-button">
-
-                        Shop Collection
-
-                    </a>
-
-
-                    <a
-                        href="#categories"
-                        class="secondary-button">
-
-                        Explore Categories
-
-                    </a>
+    </div>
 
 
-                </div>
+    <!-- Slider Dots -->
+    <div class="hero-slider-dots">
 
+    <button type="button" class="hero-dot active"
+        onclick="showHeroSlide(0)" aria-label="Slide 1"></button>
 
-            </div>
+    <button type="button" class="hero-dot"
+        onclick="showHeroSlide(1)" aria-label="Slide 2"></button>
 
+    <button type="button" class="hero-dot"
+        onclick="showHeroSlide(2)" aria-label="Slide 3"></button>
 
+    <button type="button" class="hero-dot"
+        onclick="showHeroSlide(3)" aria-label="Slide 4"></button>
 
-            <!-- HERO ART -->
+    <button type="button" class="hero-dot"
+        onclick="showHeroSlide(4)" aria-label="Slide 5"></button>
 
-            <div class="hero-art">
+    <button type="button" class="hero-dot"
+        onclick="showHeroSlide(5)" aria-label="Slide 6"></button>
 
+    <button type="button" class="hero-dot"
+        onclick="showHeroSlide(6)" aria-label="Slide 7"></button>
 
-                <div class="yarn-circle">
+    <button type="button" class="hero-dot"
+        onclick="showHeroSlide(7)" aria-label="Slide 8"></button>
 
-                    🧶
+</div>
 
-                </div>
-
-
-                <div class="flower-art">
-
-                    🌸
-
-                </div>
-
-
-                <div class="heart-art">
-
-                    🤍
-
-                </div>
-
-
-            </div>
-
-
-        </section>
+</section>
 
 
 
-        <!-- ==========================================
+        <!-- =====================================================
              CATEGORIES
-        =========================================== -->
+        ====================================================== -->
 
         <section
             id="categories"
@@ -392,24 +538,18 @@
 
 
                 <p class="eyebrow">
-
                     EXPLORE
-
                 </p>
 
 
                 <h2>
-
                     Shop by Category
-
                 </h2>
 
 
                 <p>
-
                     Find something beautiful for yourself
                     or someone special.
-
                 </p>
 
 
@@ -420,199 +560,127 @@
             <div class="category-grid">
 
 
-                <!-- FLOWERS -->
-
                 <button
                     type="button"
                     class="category-card"
                     onclick="filterCategory('Flowers')">
 
-
                     <span class="category-image">
-
                         🌸
-
                     </span>
 
-
                     <strong>
-
                         Flowers
-
                     </strong>
 
-
                     <small>
-
                         Handmade blooms
-
                     </small>
-
 
                 </button>
 
 
-
-                <!-- BAGS -->
 
                 <button
                     type="button"
                     class="category-card"
                     onclick="filterCategory('Bags')">
 
-
                     <span class="category-image">
-
                         👜
-
                     </span>
 
-
                     <strong>
-
                         Bags
-
                     </strong>
 
-
                     <small>
-
                         Crochet bags
-
                     </small>
-
 
                 </button>
 
 
-
-                <!-- TOYS -->
 
                 <button
                     type="button"
                     class="category-card"
                     onclick="filterCategory('Toys')">
 
-
                     <span class="category-image">
-
                         🧸
-
                     </span>
 
-
                     <strong>
-
                         Toys
-
                     </strong>
 
-
                     <small>
-
                         Cute handmade toys
-
                     </small>
-
 
                 </button>
 
 
-
-                <!-- HOME DECOR -->
 
                 <button
                     type="button"
                     class="category-card"
                     onclick="filterCategory('Home Decor')">
 
-
                     <span class="category-image">
-
                         🏠
-
                     </span>
 
-
                     <strong>
-
                         Home Decor
-
                     </strong>
 
-
                     <small>
-
                         Beautiful home pieces
-
                     </small>
-
 
                 </button>
 
 
-
-                <!-- GIFTS -->
 
                 <button
                     type="button"
                     class="category-card"
                     onclick="filterCategory('Gifts')">
 
-
                     <span class="category-image">
-
                         🎁
-
                     </span>
 
-
                     <strong>
-
                         Gifts
-
                     </strong>
 
-
                     <small>
-
                         Handmade gifting
-
                     </small>
-
 
                 </button>
 
 
-
-                <!-- CUSTOM -->
 
                 <button
                     type="button"
                     class="category-card"
                     onclick="filterCategory('Custom')">
 
-
                     <span class="category-image">
-
                         ✨
-
                     </span>
 
-
                     <strong>
-
                         Custom Crochet
-
                     </strong>
 
-
                     <small>
-
                         Made specially for you
-
                     </small>
-
 
                 </button>
 
@@ -624,9 +692,9 @@
 
 
 
-        <!-- ==========================================
+        <!-- =====================================================
              SHOP
-        =========================================== -->
+        ====================================================== -->
 
         <section
             id="shop"
@@ -637,32 +705,24 @@
 
 
                 <p class="eyebrow">
-
                     OUR COLLECTION
-
                 </p>
 
 
                 <h2>
-
                     Handmade Crochet Products
-
                 </h2>
 
 
                 <p>
-
-                    Choose your favourite and order directly
-                    through WhatsApp.
-
+                    Choose your favourite and order
+                    directly through WhatsApp.
                 </p>
 
 
             </div>
 
 
-
-            <!-- SEARCH AND CATEGORY FILTER -->
 
             <div class="shop-controls">
 
@@ -671,9 +731,7 @@
 
 
                     <span>
-
                         🔍
-
                     </span>
 
 
@@ -681,7 +739,8 @@
                         type="search"
                         id="product-search"
                         placeholder="Search crochet products..."
-                        oninput="searchProducts()">
+                        oninput="searchProducts()"
+                        aria-label="Search products">
 
 
                 </div>
@@ -690,55 +749,42 @@
 
                 <select
                     id="category-filter"
-                    onchange="filterProducts()">
+                    onchange="filterProducts()"
+                    aria-label="Filter products by category">
 
 
                     <option value="All">
-
                         All Categories
-
                     </option>
 
 
                     <option value="Flowers">
-
                         Flowers
-
                     </option>
 
 
                     <option value="Bags">
-
                         Bags
-
                     </option>
 
 
                     <option value="Toys">
-
                         Toys
-
                     </option>
 
 
                     <option value="Home Decor">
-
                         Home Decor
-
                     </option>
 
 
                     <option value="Gifts">
-
                         Gifts
-
                     </option>
 
 
                     <option value="Custom">
-
                         Custom Crochet
-
                     </option>
 
 
@@ -749,17 +795,12 @@
 
 
 
-            <!-- PRODUCT GRID -->
-
             <div
                 id="product-container"
                 class="product-grid">
 
             </div>
 
-
-
-            <!-- NO PRODUCTS -->
 
             <p
                 id="no-products"
@@ -774,9 +815,9 @@
 
 
 
-        <!-- ==========================================
+        <!-- =====================================================
              NEW ARRIVALS
-        =========================================== -->
+        ====================================================== -->
 
         <section
             id="new-arrivals"
@@ -787,16 +828,12 @@
 
 
                 <p class="eyebrow">
-
                     JUST ADDED
-
                 </p>
 
 
                 <h2>
-
                     New Arrivals
-
                 </h2>
 
 
@@ -809,7 +846,7 @@
 
                 <div class="new-arrival-art">
 
-                    🧶🌸
+                    🧶 🌸
 
                 </div>
 
@@ -818,9 +855,7 @@
 
 
                     <h3>
-
                         Something new is being handmade.
-
                     </h3>
 
 
@@ -834,7 +869,7 @@
 
 
                     <a
-                        href="https://wa.me/919937867737"
+                        href="https://wa.me/919438408070"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="primary-button">
@@ -854,9 +889,9 @@
 
 
 
-        <!-- ==========================================
+        <!-- =====================================================
              ABOUT
-        =========================================== -->
+        ====================================================== -->
 
         <section
             id="about"
@@ -867,9 +902,7 @@
 
 
                 <p class="eyebrow">
-
-                    ABOUT THREAD & BLOOM
-
+                    ABOUT SITA ART & CRAFT
                 </p>
 
 
@@ -884,8 +917,8 @@
 
                 <p>
 
-                    At Thread & Bloom Crochet, every piece
-                    is handmade with patience, creativity
+                    At Sita Art & Craft, every piece is
+                    handmade with patience, creativity
                     and attention to detail.
 
                 </p>
@@ -918,9 +951,9 @@
 
 
 
-        <!-- ==========================================
+        <!-- =====================================================
              REVIEWS
-        =========================================== -->
+        ====================================================== -->
 
         <section
             id="reviews"
@@ -931,16 +964,12 @@
 
 
                 <p class="eyebrow">
-
                     CUSTOMER LOVE
-
                 </p>
 
 
                 <h2>
-
                     What Our Customers Say
-
                 </h2>
 
 
@@ -953,28 +982,18 @@
 
                 <div class="review-card">
 
-
                     <div class="stars">
-
                         ★★★★★
-
                     </div>
 
-
                     <p>
-
                         Beautiful handmade work.
                         The finishing is lovely.
-
                     </p>
 
-
                     <strong>
-
                         Happy Customer
-
                     </strong>
-
 
                 </div>
 
@@ -982,28 +1001,18 @@
 
                 <div class="review-card">
 
-
                     <div class="stars">
-
                         ★★★★★
-
                     </div>
 
-
                     <p>
-
                         The crochet flower looked
                         even better in person.
-
                     </p>
 
-
                     <strong>
-
                         Happy Customer
-
                     </strong>
-
 
                 </div>
 
@@ -1011,28 +1020,18 @@
 
                 <div class="review-card">
 
-
                     <div class="stars">
-
                         ★★★★★
-
                     </div>
 
-
                     <p>
-
                         Very cute and handmade with care.
                         Loved the product.
-
                     </p>
 
-
                     <strong>
-
                         Happy Customer
-
                     </strong>
-
 
                 </div>
 
@@ -1044,9 +1043,9 @@
 
 
 
-        <!-- ==========================================
+        <!-- =====================================================
              FAQ
-        =========================================== -->
+        ====================================================== -->
 
         <section
             id="faq"
@@ -1057,16 +1056,12 @@
 
 
                 <p class="eyebrow">
-
                     HELP
-
                 </p>
 
 
                 <h2>
-
                     Frequently Asked Questions
-
                 </h2>
 
 
@@ -1079,23 +1074,18 @@
 
                 <details>
 
-
                     <summary>
-
                         How can I order a product?
-
                     </summary>
-
 
                     <p>
 
                         Select a product and click
-                        "Order on WhatsApp". We will
-                        discuss availability, delivery
-                        and payment with you.
+                        "WhatsApp". We will discuss
+                        availability, delivery and
+                        payment with you.
 
                     </p>
-
 
                 </details>
 
@@ -1103,13 +1093,9 @@
 
                 <details>
 
-
                     <summary>
-
                         Can I request a custom crochet product?
-
                     </summary>
-
 
                     <p>
 
@@ -1119,20 +1105,15 @@
 
                     </p>
 
-
                 </details>
 
 
 
                 <details>
 
-
                     <summary>
-
                         Are the products handmade?
-
                     </summary>
-
 
                     <p>
 
@@ -1141,20 +1122,15 @@
 
                     </p>
 
-
                 </details>
 
 
 
                 <details>
 
-
                     <summary>
-
                         Do you provide delivery?
-
                     </summary>
-
 
                     <p>
 
@@ -1163,7 +1139,6 @@
                         Contact us for details.
 
                     </p>
-
 
                 </details>
 
@@ -1175,9 +1150,9 @@
 
 
 
-        <!-- ==========================================
+        <!-- =====================================================
              CONTACT
-        =========================================== -->
+        ====================================================== -->
 
         <section
             id="contact"
@@ -1188,24 +1163,18 @@
 
 
                 <p class="eyebrow">
-
                     GET IN TOUCH
-
                 </p>
 
 
                 <h2>
-
                     Have something special in mind?
-
                 </h2>
 
 
                 <p>
-
                     Talk to us about products,
                     custom designs or orders.
-
                 </p>
 
 
@@ -1213,7 +1182,7 @@
 
 
                     <a
-                        href="https://wa.me/919937867737"
+                        href="https://wa.me/919438408070"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="primary-button">
@@ -1224,7 +1193,7 @@
 
 
                     <a
-                        href="tel:+919937867737"
+                        href="tel:+919438408070"
                         class="secondary-button">
 
                         📞 Call Us
@@ -1243,65 +1212,452 @@
 
     </main>
 
+    <!-- =====================================================
+     OFFLINE CLASS DETAILS MODAL
+===================================================== -->
+
+<div
+    id="offline-class-modal"
+    class="offline-class-modal"
+    aria-hidden="true">
+
+    <div class="offline-class-modal-box">
+
+        <button
+            type="button"
+            class="offline-class-close"
+            onclick="closeOfflineClass()"
+            aria-label="Close offline class">
+
+            ×
+
+        </button>
 
 
-    <!-- ==========================================
-         BOOK NOW POPUP
-    =========================================== -->
+        <!-- IMAGE -->
+
+        <div class="offline-class-image crochet-class-visual">
+
+    <div class="crochet-art">
+
+        <div class="yarn-ball">🧶</div>
+
+        <div class="crochet-flower flower-one">🌸</div>
+
+        <div class="crochet-flower flower-two">🌺</div>
+
+        <div class="crochet-flower flower-three">🌼</div>
+
+        <div class="crochet-heart">♡</div>
+
+        <div class="crochet-hook">🪝</div>
+
+    </div>
+
+    <div class="crochet-art-text">
+
+        <span>
+            SITA ART & CRAFT
+        </span>
+
+        <strong>
+            Learn • Create • Crochet
+        </strong>
+
+        <small>
+            Handmade with love
+        </small>
+
+    </div>
+
+</div>
+
+
+        <!-- CONTENT -->
+
+        <div class="offline-class-content">
+
+            <p class="eyebrow">
+                LEARN WITH US
+            </p>
+
+            <h2>
+                Offline Crochet Class
+            </h2>
+
+            <p class="offline-class-intro">
+
+                Learn the beautiful art of crochet in a
+                friendly, practical and hands-on environment.
+                Our offline class is designed for beginners
+                as well as learners who want to improve
+                their crochet skills.
+
+            </p>
+
+
+            <!-- CLASS INFO -->
+
+            <div class="offline-class-info">
+
+                <div>
+                    <span>📍</span>
+                    <strong>Location</strong>
+                    <p>Cuttack, Odisha</p>
+                </div>
+
+                <div>
+                    <span>🕙</span>
+                    <strong>Time</strong>
+                    <p>10:00 AM – 4:00 PM</p>
+                </div>
+
+                <div>
+                    <span>👩</span>
+                    <strong>Age</strong>
+                    <p>8+</p>
+                </div>
+
+                <div>
+                    <span>💰</span>
+                    <strong>Class Fee</strong>
+                    <p>₹2,000</p>
+                </div>
+
+            </div>
+
+
+            <!-- WHAT WE TEACH -->
+
+            <div class="offline-class-teaching">
+
+                <p class="eyebrow">
+                    WHAT WE TEACH
+                </p>
+
+                <h3>
+                    From Basic Crochet to Beautiful Creations
+                </h3>
+
+
+                <div class="teaching-item">
+
+                    <span>🧶</span>
+
+                    <div>
+
+                        <h4>
+                            Crochet Basics
+                        </h4>
+
+                        <p>
+                            Learn how to hold the crochet hook
+                            and yarn correctly, make basic
+                            stitches, start projects and finish
+                            your work neatly.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="teaching-item">
+
+                    <span>📖</span>
+
+                    <div>
+
+                        <h4>
+                            Pattern Reading
+                        </h4>
+
+                        <p>
+                            Understand crochet patterns,
+                            basic crochet symbols, stitch
+                            counts and how to follow simple
+                            designs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="teaching-item">
+
+                    <span>🌸</span>
+
+                    <div>
+
+                        <h4>
+                            Crochet Flowers
+                        </h4>
+
+                        <p>
+                            Learn to create beautiful crochet
+                            flowers including basic flowers,
+                            roses and different decorative
+                            flower designs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="teaching-item">
+
+                    <span>🎀</span>
+
+                    <div>
+
+                        <h4>
+                            Bow & Heart
+                        </h4>
+
+                        <p>
+                            Learn how to make cute crochet
+                            bows and hearts in different
+                            sizes and designs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="teaching-item">
+
+                    <span>☕</span>
+
+                    <div>
+
+                        <h4>
+                            Crochet Coaster
+                        </h4>
+
+                        <p>
+                            Learn how to create a beautiful
+                            coaster while understanding
+                            increasing stitches, shape
+                            formation and proper finishing.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="teaching-item">
+
+                    <span>🟫</span>
+
+                    <div>
+
+                        <h4>
+                            Granny Square
+                        </h4>
+
+                        <p>
+                            Learn how to start a granny square,
+                            work in rounds, change colours,
+                            maintain the shape and finish it
+                            beautifully.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SKILLS -->
+
+            <div class="offline-class-skills">
+
+                <h3>
+                    ✨ What You Will Learn
+                </h3>
+
+                <div class="skill-list">
+
+                    <span>Basic Crochet</span>
+                    <span>Basic Stitches</span>
+                    <span>Pattern Reading</span>
+                    <span>Flowers</span>
+                    <span>Rose</span>
+                    <span>Bow</span>
+                    <span>Heart</span>
+                    <span>Coaster</span>
+                    <span>Granny Square</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMPORTANT NOTE -->
+
+            <div class="offline-class-note">
+
+                <h3>
+                    📌 Please Note
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Materials will not be provided.
+                    </li>
+
+                    <li>
+                        Students should bring their own
+                        crochet materials.
+                    </li>
+
+                    <li>
+                        Suitable for beginners to advanced
+                        learners.
+                    </li>
+
+                    <li>
+                        Ladies only.
+                    </li>
+
+                    <li>
+                        Practical, hands-on learning with
+                        personal guidance.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- FEE -->
+
+            <div class="offline-class-fee">
+
+                <div>
+
+                    <small>
+                        OFFLINE CLASS
+                    </small>
+
+                    <strong>
+                        ₹2,000
+                    </strong>
+
+                    <span>
+                        Full-day practical class
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="offline-class-book-button"
+                    onclick="openBookingForm(); closeOfflineClass();">
+
+                    Book This Class
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    <!-- =====================================================
+         PRODUCT DETAILS MODAL
+    ====================================================== -->
 
     <div
-        id="booking-modal"
-        class="booking-modal">
+        id="product-modal"
+        class="product-modal"
+        aria-hidden="true">
 
 
-        <div class="booking-box">
+        <div class="product-modal-box">
 
-
-            <!-- CLOSE -->
 
             <button
                 type="button"
-                class="close-booking"
-                onclick="closeBookingForm()"
-                aria-label="Close">
+                class="modal-close"
+                onclick="closeProductModal()"
+                aria-label="Close product details">
 
                 ×
 
             </button>
 
 
+            <div
+                id="modal-product-content">
 
-            <!-- TITLE -->
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         BOOKING MODAL
+    ====================================================== -->
+
+    <div
+        id="booking-modal"
+        class="booking-modal"
+        aria-hidden="true">
+
+
+        <div class="booking-box">
+
+
+            <button
+                type="button"
+                class="close-booking"
+                onclick="closeBookingForm()"
+                aria-label="Close booking form">
+
+                ×
+
+            </button>
+
 
             <h2>
-
-                Book Now
-
+                Order Now
             </h2>
 
 
             <p class="booking-intro">
 
-                Fill in your details and we will
-                contact you on WhatsApp.
+                Tell us what you need and we will
+                contact you through WhatsApp.
 
             </p>
 
 
-
-            <!-- FORM -->
 
             <form
                 id="booking-form"
                 onsubmit="sendBookingToWhatsApp(event)">
 
 
-                <!-- NAME -->
-
                 <label for="customer-name">
-
                     Name *
-
                 </label>
 
 
@@ -1309,23 +1665,19 @@
                     type="text"
                     id="customer-name"
                     placeholder="Enter your name"
+                    autocomplete="name"
                     required>
 
 
                 <span
                     id="name-error"
                     class="form-error">
-
                 </span>
 
 
 
-                <!-- PHONE -->
-
                 <label for="customer-phone">
-
                     Phone *
-
                 </label>
 
 
@@ -1333,23 +1685,19 @@
                     type="tel"
                     id="customer-phone"
                     placeholder="Enter your phone number"
+                    autocomplete="tel"
                     required>
 
 
                 <span
                     id="phone-error"
                     class="form-error">
-
                 </span>
 
 
 
-                <!-- PRODUCT -->
-
                 <label for="booking-product">
-
                     Product *
-
                 </label>
 
 
@@ -1357,66 +1705,16 @@
                     id="booking-product"
                     required>
 
-
                     <option value="">
-
                         Please select a product
-
                     </option>
-
-
-                    <option value="Crochet Flower">
-
-                        Crochet Flower
-
-                    </option>
-
-
-                    <option value="Crochet Handbag">
-
-                        Crochet Handbag
-
-                    </option>
-
-
-                    <option value="Crochet Teddy">
-
-                        Crochet Teddy
-
-                    </option>
-
-
-                    <option value="Crochet Home Decor">
-
-                        Crochet Home Decor
-
-                    </option>
-
-
-                    <option value="Crochet Gift Set">
-
-                        Crochet Gift Set
-
-                    </option>
-
-
-                    <option value="Custom Crochet Creation">
-
-                        Custom Crochet Creation
-
-                    </option>
-
 
                 </select>
 
 
 
-                <!-- DETAILS -->
-
                 <label for="booking-details">
-
                     Additional Details
-
                 </label>
 
 
@@ -1426,14 +1724,11 @@
                     placeholder="Tell us what you need..."></textarea>
 
 
-
-                <!-- SUBMIT -->
-
                 <button
                     type="submit"
                     class="quote-button">
 
-                    Get Free Quote
+                    💬 Send Enquiry on WhatsApp
 
                 </button>
 
@@ -1448,17 +1743,16 @@
 
 
 
-    <!-- ==========================================
+    <!-- =====================================================
          FLOATING WHATSAPP
-         BOTTOM RIGHT ONLY
-    =========================================== -->
+    ====================================================== -->
 
     <a
-        href="https://wa.me/919937867737"
+        href="https://wa.me/919438408070"
         target="_blank"
         rel="noopener noreferrer"
         class="whatsapp-button"
-        aria-label="Chat on WhatsApp">
+        aria-label="Chat with Sita Art & Craft on WhatsApp">
 
 
         <svg
@@ -1473,17 +1767,15 @@
             <path
                 d="M16.02 3C8.84 3 3 8.79 3 15.92c0 2.28.6 4.5 1.73 6.46L3 29l6.79-1.7a13.1 13.1 0 006.23 1.57h.01C23.2 28.87 29 23.07 29 15.94 29 8.81 23.2 3 16.02 3zm0 23.69h-.01c-1.98 0-3.92-.53-5.61-1.53l-.4-.24-4.03 1.01 1.08-3.93-.26-.4a10.76 10.76 0 01-1.65-5.68c0-5.91 4.84-10.72 10.79-10.72 2.87 0 5.57 1.11 7.6 3.13a10.65 10.65 0 013.15 7.59c0 5.91-4.83 10.72-10.66 10.77z"/>
 
-
         </svg>
-
 
     </a>
 
 
 
-    <!-- ==========================================
+    <!-- =====================================================
          FOOTER
-    =========================================== -->
+    ====================================================== -->
 
     <footer>
 
@@ -1492,16 +1784,12 @@
 
 
             <h3>
-
-                🧶 Thread & Bloom Crochet
-
+                🧶 Sita Art & Craft
             </h3>
 
 
             <p>
-
                 Handmade • Beautiful • Made with Love
-
             </p>
 
 
@@ -1517,33 +1805,22 @@
             </a>
 
 
-            <a href="#shop">
-                Shop
-            </a>
-
-
-            <a href="#categories">
-                Categories
-            </a>
-
-
             <a href="#about">
                 About
             </a>
 
 
-            <a href="#contact">
-                Contact
+            <a href="#faq">
+                FAQ
             </a>
 
 
         </div>
 
 
-
         <p class="copyright">
 
-            © 2026 Thread & Bloom Crochet.
+            © 2026 Sita Art & Craft.
             Handmade with love.
 
         </p>
@@ -1552,10 +1829,6 @@
     </footer>
 
 
-
-    <!-- ==========================================
-         JAVASCRIPT
-    =========================================== -->
 
     <script src="script.js"></script>
 
