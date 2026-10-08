@@ -5,7 +5,7 @@
    WHATSAPP
 ===================================================== */
 
-const WHATSAPP_NUMBER = "919438408070";
+const WHATSAPP_NUMBER = "919937867737";
 
 
 /* =====================================================
@@ -464,7 +464,7 @@ function orderProduct(productId) {
 
     const message =
 
-        "🧶 Hello Sita Art & Craft!\n\n" +
+        "🧶 Hello Miora Croche & Craft!\n\n" +
 
         "I am interested in this product:\n\n" +
 
@@ -1040,7 +1040,7 @@ function sendBookingToWhatsApp(event) {
 
     let message =
 
-        "🧶 Hello Sita Art & Craft!\n\n" +
+        "🧶 Hello Miora Croche & Craft!\n\n" +
 
         "I would like to enquire about a product.\n\n" +
 
@@ -1251,7 +1251,7 @@ function selectCourse(courseName) {
 
         const message =
 
-            "Hello Sita Art & Craft,\n\n" +
+            "Hello Miora Croche & Craft,\n\n" +
 
             "I am interested in your Online Crochet Classes.\n\n" +
 
