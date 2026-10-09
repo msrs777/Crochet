@@ -170,137 +170,51 @@ function getPriceText(product) {
    DISPLAY PRODUCTS
 ===================================================== */
 
+
 function displayProducts(list = products) {
+    const container = document.getElementById("product-container");
+    const noProducts = document.getElementById("no-products");
 
-    const container =
-        document.getElementById("product-container");
-
-    const noProducts =
-        document.getElementById("no-products");
-
-
-    if (!container) {
-        return;
-    }
-
+    if (!container) return;
 
     container.innerHTML = "";
 
-
     if (list.length === 0) {
-
-        if (noProducts) {
-
-            noProducts.style.display = "block";
-
-        }
-
+        if (noProducts) noProducts.style.display = "block";
         return;
-
     }
 
-
-    if (noProducts) {
-
-        noProducts.style.display = "none";
-
-    }
-
+    if (noProducts) noProducts.style.display = "none";
 
     list.forEach(product => {
-
-        const priceText =
-            getPriceText(product);
-
-
-        const newBadge =
-            product.newArrival
-                ? `<span class="new-badge">NEW</span>`
-                : "";
-
+        const imageHTML = product.image
+            ? `<img
+                    src="${product.image}"
+                    alt="${product.name}"
+                    onclick="openProductModal(${product.id})"
+                    style="width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in;"
+               >`
+            : `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:90px;">
+                    ${product.icon || "🧶"}
+               </div>`;
 
         container.innerHTML += `
-
             <article class="product-card">
+                
 
+<div class="product-image">
+    ${imageHTML}
+</div>
 
-                <div class="product-image">
-
-    <img
-        src="${product.image}"
-        alt="${product.name}">
-
-    ${newBadge}
-
+<div class="product-name-price">
+    <span>${product.name}</span>
+    <span>${getPriceText(product)}</span>
 </div>
 
 
-                <div class="product-info">
-
-
-                    <div class="product-category">
-
-                        ${product.category}
-
-                    </div>
-
-
-                    <h3 class="product-name">
-
-                        ${product.name}
-
-                    </h3>
-
-
-                    <p class="product-description">
-
-                        ${product.description}
-
-                    </p>
-
-
-                    <div class="product-price">
-
-                        ${priceText}
-
-                    </div>
-
-
-                    <div class="product-actions">
-
-
-                        <button
-                            type="button"
-                            class="view-button"
-                            onclick="openProductModal(${product.id})">
-
-                            View
-
-                        </button>
-
-
-                        <button
-                            type="button"
-                            class="order-button"
-                            onclick="orderProduct(${product.id})">
-
-                            WhatsApp
-
-                        </button>
-
-
-                    </div>
-
-
-                </div>
-
-
             </article>
-
         `;
-
     });
-
 }
 
 
@@ -1419,123 +1333,6 @@ document.addEventListener(
 );
 
 
-/* =====================================================
-   AUTOMATIC PRODUCT SLIDER
-===================================================== */
-
-let productSliderInterval;
-
-
-function startProductSlider() {
-
-    const slider =
-        document.getElementById(
-            "product-container"
-        );
-
-
-    if (!slider) {
-
-        return;
-
-    }
-
-
-    /* Stop previous timer */
-
-    if (productSliderInterval) {
-
-        clearInterval(
-            productSliderInterval
-        );
-
-    }
-
-
-    productSliderInterval =
-        setInterval(function () {
-
-            const cards =
-                slider.querySelectorAll(
-                    ".product-card"
-                );
-
-
-            if (cards.length <= 1) {
-
-                return;
-
-            }
-
-
-            const firstCard =
-                cards[0];
-
-
-            const cardWidth =
-                firstCard.offsetWidth;
-
-
-            const gap = 24;
-
-
-            slider.scrollBy({
-
-                left:
-                    cardWidth + gap,
-
-                behavior:
-                    "smooth"
-
-            });
-
-
-            /*
-             * When reaching the end,
-             * smoothly return to the beginning.
-             */
-
-            if (
-                slider.scrollLeft +
-                slider.clientWidth >=
-                slider.scrollWidth - 10
-            ) {
-
-                setTimeout(function () {
-
-                    slider.scrollTo({
-
-                        left: 0,
-
-                        behavior: "smooth"
-
-                    });
-
-                }, 700);
-
-            }
-
-        }, 3000);
-
-}
-
-
-/* =====================================================
-   START PRODUCT SLIDER AFTER PRODUCTS LOAD
-===================================================== */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-        setTimeout(function () {
-
-            startProductSlider();
-
-        }, 500);
-
-    }
-);
 
 
 /* =====================================================
@@ -1662,3 +1459,9 @@ document.addEventListener(
 
     }
 );
+
+
+
+
+
+
