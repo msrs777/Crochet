@@ -3830,3 +3830,30 @@ body.offline-open {
     white-space: nowrap;
     flex-shrink: 0;
 }
+
+
+
+
+
+
+
+
+
+.preorder-button {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 7px 16px;
+    background: #a95770;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.preorder-button:hover {
+    background: #874158;
+}
+
