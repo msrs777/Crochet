@@ -3865,3 +3865,51 @@ body.offline-open {
 .preorder-button {
     margin-left: 100px !important;
 }
+
+
+
+
+
+
+
+
+
+/* Product Add to Cart and Buy Now buttons */
+
+.product-action-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 14px 0;
+}
+
+.product-action-buttons button {
+    flex: 1;
+    min-width: 0;
+    padding: 11px 8px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.add-cart-button {
+    background: #f1e0d9;
+    color: #74384c;
+}
+
+.buy-now-button {
+    background: #a95770;
+    color: #ffffff;
+}
+
+.product-action-buttons button:hover {
+    opacity: 0.88;
+}
+
+@media (max-width: 380px) {
+    .product-action-buttons {
+        flex-direction: column;
+    }
+}
+
